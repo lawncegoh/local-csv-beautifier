@@ -76,6 +76,12 @@ body {
   box-shadow: var(--shadow);
 }
 
+.card-feature {
+  padding: 20px;
+  border-width: 2px;
+  box-shadow: 0 14px 30px rgba(8, 32, 83, 0.12);
+}
+
 .card h2 {
   margin: 0 0 12px;
   font-size: 1.1rem;
