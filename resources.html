@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSV cleanup and data cleaning tutorials</title>
+    <title>CSV Cleanup Guides | Local CSV Beautifier</title>
     <meta
       name="description"
-      content="Practical CSV cleanup tutorials: clean large datasets fast, Excel-to-CSV fixes, and spreadsheet automation tips using a local-first workflow."
+      content="Practical CSV cleanup tutorials: clean large datasets fast, Excel-to-CSV fixes, and spreadsheet automation tips for local-first data workflows."
     />
-    <meta name="keywords" content="CSV cleanup, spreadsheet automation tips, Excel CSV export cleanup, data cleaning tutorials" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://your-domain.com/resources.html" />
     <link rel="stylesheet" href="styles.css" />
@@ -18,7 +17,7 @@
       <header class="hero">
         <h1>CSV cleanup and data cleaning resources</h1>
         <p>
-          Practical guides and use cases for cleaning CSV files, plus spreadsheet automation tips for faster workflows.
+          Practical guides for spreadsheet cleanup: CSV cleanup, spreadsheet automation tips, and safe workflows for fast cleaning.
         </p>
         <div class="actions">
           <a class="btn ghost" href="index.html">Back to tool</a>
@@ -29,50 +28,55 @@
       <section class="app-shell">
         <div class="content-area">
           <section class="card">
-            <h2>Tutorials</h2>
+            <h2>Latest guides</h2>
             <div class="resource-grid">
               <article id="clean-large" class="resource-card">
-                <p class="resource-meta">Tutorial • February 2026</p>
+                <p class="resource-meta">Tutorial • January 2026</p>
                 <h3>How to clean large datasets fast</h3>
                 <p>
-                  For large CSV files, use a predictable sequence: remove empty rows, normalize headers, trim whitespace,
-                  remove duplicates, then apply number/date normalization. This reduces repeated passes and speeds cleanup.
+                  Large CSV files can be cleaned quickly by reducing transforms to a controlled pipeline:
+                  normalize headers, trim whitespace, remove duplicates, and only then apply number/date normalization.
+                  This order reduces mistakes and makes each step easier to audit.
                 </p>
-                <p>Suggested workflow:</p>
+                <p>
+                  In-browser cleaning is best for sensitive files because data never leaves the browser by default.
+                </p>
                 <ul>
-                  <li>Start with a preview-only run.</li>
-                  <li>Review the change log for risky transforms.</li>
-                  <li>Save settings as a profile and reuse it for the same source type.</li>
+                  <li>Remove empty rows first and inspect a source sample.</li>
+                  <li>Deduplicate only after confirming your header structure.</li>
+                  <li>Run one profile per dataset type and save for repeat jobs.</li>
                 </ul>
               </article>
 
               <article id="excel-tricks" class="resource-card">
-                <p class="resource-meta">Tutorial • February 2026</p>
-                <h3>Excel tricks for CSV cleanup</h3>
+                <p class="resource-meta">Tutorial • January 2026</p>
+                <h3>Excel tricks for CSV cleanup and spreadsheet automation tips</h3>
                 <p>
-                  Build reliable export processes from Excel by enforcing one header format, removing hidden characters, and
-                  validating delimiters before import into analytics tools.
+                  If your team exports from Excel frequently, adopt a cleanup routine before import:
+                  consistent delimiter handling, header normalization, and safe null value handling.
                 </p>
-                <p>Spreadsheet automation tips:</p>
+                <p>
+                  Use local tools to validate transformations, then re-import the cleaned CSV to avoid manual fixes.
+                </p>
                 <ul>
-                  <li>Standardize column naming to snake_case on every export.</li>
-                  <li>Strip formula-like or wrapped quotes only after confirming cell content.</li>
-                  <li>Export smaller CSV slices for QA before processing full files.</li>
+                  <li>Keep one canonical column naming style (for example, snake_case).</li>
+                  <li>Separate cleanup from analytics formatting in your reporting step.</li>
+                  <li>Export smaller files while testing, then scale to full-sized exports.</li>
                 </ul>
               </article>
 
               <article id="python-csv" class="resource-card">
-                <p class="resource-meta">Tutorial • February 2026</p>
-                <h3>Python CSV scripts for CSV cleanup</h3>
+                <p class="resource-meta">Tutorial • January 2026</p>
+                <h3>Python CSV scripts for CSV cleanup workflows</h3>
                 <p>
-                  For repeatable data prep, combine Python scripts with this browser tool: script bulk normalization for
-                  heavy tasks, then use local preview cleanup and manual review on edge cases.
+                  Use Python for repeatable preprocessing when files are large, then use this browser cleaner for ad-hoc
+                  checks and quick inspections.
                 </p>
-                <p>Script-first checklist:</p>
+                <p>A simple pattern is: ingest, standardize fields, dedupe, and write cleaned output with validated logs.</p>
                 <ul>
-                  <li>Log each transformation to keep change history.</li>
-                  <li>Keep scripts idempotent so reruns are stable.</li>
-                  <li>Use strict schema checks for critical columns.</li>
+                  <li>Use pandas for large transformations and explicit schema checks.</li>
+                  <li>Keep scripts idempotent so reruns produce the same result.</li>
+                  <li>Store transformation steps in version control with change notes.</li>
                 </ul>
               </article>
             </div>
@@ -81,21 +85,26 @@
           <section class="card">
             <h2>Use cases</h2>
             <div class="use-cases">
-              <div class="report-card"><strong>Marketing:</strong> clean campaign exports before reporting.</div>
-              <div class="report-card"><strong>Finance:</strong> normalize dates and numbers before review.</div>
-              <div class="report-card"><strong>Data ops:</strong> trim, dedupe, and validate incoming feeds automatically.</div>
+              <div class="report-card">
+                <strong>Marketing teams:</strong>
+                clean campaign export files before reporting.
+              </div>
+              <div class="report-card">
+                <strong>Finance teams:</strong>
+                normalize dates and numbers before reconciliation.
+              </div>
+              <div class="report-card">
+                <strong>Support teams:</strong>
+                remove null-like values and whitespace noise from customer data.
+              </div>
             </div>
-          </section>
-
-          <section class="card">
-            <h2>Suggested next step</h2>
-            <p>
-              Export your cleaned file and share with your analytics, BI, or accounting workflow. If a cleanup issue keeps
-              recurring, save a profile and reuse it in one click.
-            </p>
           </section>
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <a class="footer-tab" href="index.html#ad-support">Ads</a>
+    </footer>
   </body>
 </html>
