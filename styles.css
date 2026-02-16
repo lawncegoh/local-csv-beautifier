@@ -31,6 +31,16 @@ body {
   margin-bottom: 16px;
 }
 
+.resource-back-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.resource-shell {
+  width: 100%;
+}
+
 .app-shell {
   display: grid;
   grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
