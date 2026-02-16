@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local CSV Beautifier - Clean CSVs in Your Browser</title>
+    <meta
+      name="description"
+      content="Clean CSVs in-browser. Normalize headers, trim spacing, fix dates/numbers, remove duplicates, and download instantly without uploads."
+    />
+    <meta name="keywords" content="CSV cleaner, local CSV tool, offline CSV editor, dedupe CSV, CSV formatter, data cleanup" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Local CSV Beautifier" />
+    <meta name="theme-color" content="#1f6feb" />
+    <meta property="og:site_name" content="Local CSV Beautifier" />
+    <meta
+      property="og:title"
+      content="Local CSV Beautifier - Clean CSVs in Your Browser"
+    />
+    <meta
+      property="og:description"
+      content="Upload or paste a CSV, clean it in-browser, and export the fixed file in seconds."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta
+      property="og:image"
+      content="https://your-domain.com/og-image.svg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Local CSV Beautifier - Clean CSVs in Your Browser"
+    />
+    <meta
+      name="twitter:description"
+      content="Clean CSVs in-browser, preview what changed, and download results without uploading files."
+    />
+    <link rel="canonical" href="https://your-domain.com/" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000"
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Local CSV Beautifier",
+        "url": "https://your-domain.com/",
+        "applicationCategory": "Utilities",
+        "operatingSystem": "Any modern browser",
+        "description": "A local-first CSV cleanup web app that trims, normalizes, deduplicates, and exports CSV files in-browser.",
+        "featureList": [
+          "CSV parsing",
+          "Header normalization",
+          "Row deduplication",
+          "Whitespace cleanup",
+          "Number formatting",
+          "Date normalization",
+          "Local-only processing"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>Local CSV Beautifier</h1>
+        <p>Upload or paste a CSV, clean it, review the diff, and download the result. Nothing is sent to a server.</p>
+      </header>
+      <section class="app-shell">
+        <aside class="sidebar">
+          <section class="card">
+            <h2>Privacy &amp; data safety</h2>
+            <ul class="disclaimer">
+              <li>All processing runs in your browser.</li>
+              <li>Your CSV never uploads.</li>
+              <li>Only clean settings can be saved, not file content.</li>
+              <li>Session data is kept in memory and clears when you close the tab.</li>
+              <li>Keep sensitive files on trusted devices; extensions or malware can still expose local data.</li>
+              <li>Exports are created and saved directly on your device.</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Why use this local CSV cleaner</h2>
+            <p>
+              If your spreadsheets feel messy, use this before importing into BI,
+              dashboards, or reporting tools.
+            </p>
+            <div class="use-cases">
+              <div class="report-card"><strong>Teams:</strong>Clean exports before uploading to Google Sheets.</div>
+              <div class="report-card"><strong>Finance:</strong>Normalize dates and numbers before review.</div>
+              <div class="report-card"><strong>Analytics:</strong>Drop duplicates and blank rows to reduce noise.</div>
+              <div class="report-card"><strong>Freelancers:</strong>Prepare client exports without extra tooling.</div>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>How it works</h2>
+            <ol>
+              <li>Upload a CSV file or paste text.</li>
+              <li>Pick cleanup options.</li>
+              <li>Preview source and cleaned rows.</li>
+              <li>Download your cleaned CSV and change log.</li>
+            </ol>
+          </section>
+
+          <section class="card faq">
+            <h2>FAQ</h2>
+            <details>
+              <summary>Do my files upload to a server?</summary>
+              <p>No. All transformations happen locally in your browser and the cleaned file is generated on-device.</p>
+            </details>
+            <details>
+              <summary>Can I use it for large files?</summary>
+              <p>Yes, within browser limits. For very large CSV files, try removing unnecessary columns first for best performance.</p>
+            </details>
+            <details>
+              <summary>Can I reuse settings?</summary>
+              <p>Yes, save and reload cleaning profiles in your browser for repeatable results.</p>
+            </details>
+          </section>
+
+          <section class="card ad-unit">
+            <h2>Support this tool</h2>
+            <p class="muted">
+              Ad placeholder. Replace publisher and slot IDs after AdSense approval.
+            </p>
+            <ins
+              class="adsbygoogle"
+              style="display: block; min-height: 120px"
+              data-ad-client="ca-pub-0000000000000000"
+              data-ad-slot="0000000000"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+          </section>
+        </aside>
+
+        <div class="content-area">
+          <section class="card">
+            <h2>1) Add source</h2>
+            <div class="input-grid">
+              <div class="field">
+                <label for="csvFile">Upload CSV</label>
+                <input id="csvFile" type="file" accept=".csv,text/csv,.tsv,text/tab-separated-values,text/plain" />
+                <div id="fileName" class="muted">No file chosen</div>
+              </div>
+
+              <div class="field">
+                <label for="csvText">Or paste CSV text</label>
+                <textarea id="csvText" rows="8" placeholder="Paste your CSV content here..."></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Cleaning options</label>
+              <div class="options-grid">
+                <label><input type="checkbox" id="optTrimCells" checked /> Trim cell whitespace</label>
+                <label
+                  ><input type="checkbox" id="optCollapseSpaces" checked /> Collapse internal whitespace</label
+                >
+                <label
+                  ><input type="checkbox" id="optNormalizeNulls" checked /> Normalize null-like values to empty</label
+                >
+                <label><input type="checkbox" id="optStripQuotes" checked /> Strip outer quotes</label>
+                <label><input type="checkbox" id="optHeaderNormalize" checked /> Normalize headers (snake_case)</label>
+                <label><input type="checkbox" id="optHeaderUnique" checked /> Make header names unique</label>
+                <label><input type="checkbox" id="optRemoveEmptyRows" checked /> Remove empty rows</label>
+                <label><input type="checkbox" id="optDedupeRows" checked /> Remove duplicate rows</label>
+                <label><input type="checkbox" id="optNormalizeNumbers" checked /> Normalize number formatting</label>
+                <label><input type="checkbox" id="optNormalizeDates" checked /> Normalize date columns to YYYY-MM-DD</label>
+                <label>
+                  <span>Delimiter</span>
+                  <select id="optDelimiter">
+                    <option value="auto" selected>Auto</option>
+                    <option value=",">Comma</option>
+                    <option value=";">Semicolon</option>
+                    <option value="\t">Tab</option>
+                    <option value="|">Pipe</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button id="runBtn" class="btn primary">Run cleanup</button>
+              <button id="clearBtn" class="btn ghost">Clear</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>2) Profile</h2>
+            <div class="field profile-row">
+              <label for="profileName">Save current settings as profile</label>
+              <div class="profile-controls">
+                <input id="profileName" type="text" placeholder="Profile name" />
+                <button id="saveProfileBtn" class="btn primary">Save</button>
+                <select id="profileSelect">
+                  <option value="">Load profile…</option>
+                </select>
+                <button id="deleteProfileBtn" class="btn danger">Delete</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>3) Report</h2>
+            <div id="status" class="status">Load a CSV and run cleanup.</div>
+            <div id="report" class="report-grid"></div>
+          </section>
+
+          <section class="card" id="previewSection">
+            <h2>4) Preview — source (first rows)</h2>
+            <div id="previewOriginal" class="preview-single"></div>
+          </section>
+
+          <section class="card" id="previewCleanSection">
+            <h2>5) Preview — cleaned (first rows)</h2>
+            <div class="actions">
+              <button id="downloadCsvBtn" class="btn primary" disabled>Download cleaned CSV</button>
+              <button id="downloadLogBtn" class="btn ghost" disabled>Download change log</button>
+            </div>
+            <div id="previewCleaned" class="preview-single"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <template id="tableTemplate">
+      <div class="table-wrap">
+        <h3></h3>
+        <div class="table-area"></div>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        try {
+          document
+            .querySelectorAll("ins.adsbygoogle")
+            .forEach(() => (window.adsbygoogle = window.adsbygoogle || []).push({}));
+        } catch {
+          // AdSense placeholders are optional until IDs are configured.
+        }
+      });
+    </script>
+  </body>
+</html>
