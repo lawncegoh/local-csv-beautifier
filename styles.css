@@ -169,6 +169,23 @@ textarea {
   border-color: #d5e3ff;
 }
 
+.btn-guide {
+  color: #04233a;
+  border: 1px solid #0ea5a5;
+  background: linear-gradient(135deg, #ccfbf1 0%, #d9f99d 100%);
+  border-radius: 999px;
+  padding-inline: 16px;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-guide:hover {
+  box-shadow: 0 8px 18px rgba(14, 165, 165, 0.24);
+  transform: translateY(-1px);
+}
+
 .btn.danger {
   background: #fff4f4;
   border-color: #ffd0d0;
