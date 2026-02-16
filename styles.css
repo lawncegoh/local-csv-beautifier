@@ -274,6 +274,18 @@ textarea {
   background: linear-gradient(160deg, #f8fbff, #eef4ff);
 }
 
+.ad-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .ad-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .preview-single {
   display: flex;
   flex-direction: column;
