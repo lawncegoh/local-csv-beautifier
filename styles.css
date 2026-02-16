@@ -43,18 +43,20 @@ body {
 
 .app-shell {
   display: grid;
-  grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
   gap: 14px;
   align-items: start;
 }
 
 .sidebar {
+  order: 2;
   position: sticky;
   top: 10px;
 }
 
 .content-area {
   min-width: 0;
+  order: 1;
 }
 
 .hero h1 {
@@ -80,6 +82,7 @@ body {
   padding: 20px;
   border-width: 2px;
   box-shadow: 0 14px 30px rgba(8, 32, 83, 0.12);
+  transform: translateY(-2px);
 }
 
 .card h2 {
