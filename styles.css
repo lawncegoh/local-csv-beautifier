@@ -147,6 +147,10 @@ textarea {
   padding: 10px 14px;
   font: inherit;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:disabled {
@@ -169,6 +173,25 @@ textarea {
   background: #fff4f4;
   border-color: #ffd0d0;
   color: var(--danger);
+}
+
+.resource-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.resource-card {
+  border: 1px solid #e5ebfa;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fbfdff;
+}
+
+.resource-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 0 6px;
 }
 
 .status {

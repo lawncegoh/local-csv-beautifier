@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV cleanup and data cleaning tutorials</title>
+    <meta
+      name="description"
+      content="Practical CSV cleanup tutorials: clean large datasets fast, Excel-to-CSV fixes, and spreadsheet automation tips using a local-first workflow."
+    />
+    <meta name="keywords" content="CSV cleanup, spreadsheet automation tips, Excel CSV export cleanup, data cleaning tutorials" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://your-domain.com/resources.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>CSV cleanup and data cleaning resources</h1>
+        <p>
+          Practical guides and use cases for cleaning CSV files, plus spreadsheet automation tips for faster workflows.
+        </p>
+        <div class="actions">
+          <a class="btn ghost" href="index.html">Back to tool</a>
+          <a class="btn ghost" href="compliance.html">Compliance notice</a>
+        </div>
+      </header>
+
+      <section class="app-shell">
+        <div class="content-area">
+          <section class="card">
+            <h2>Tutorials</h2>
+            <div class="resource-grid">
+              <article id="clean-large" class="resource-card">
+                <p class="resource-meta">Tutorial • February 2026</p>
+                <h3>How to clean large datasets fast</h3>
+                <p>
+                  For large CSV files, use a predictable sequence: remove empty rows, normalize headers, trim whitespace,
+                  remove duplicates, then apply number/date normalization. This reduces repeated passes and speeds cleanup.
+                </p>
+                <p>Suggested workflow:</p>
+                <ul>
+                  <li>Start with a preview-only run.</li>
+                  <li>Review the change log for risky transforms.</li>
+                  <li>Save settings as a profile and reuse it for the same source type.</li>
+                </ul>
+              </article>
+
+              <article id="excel-tricks" class="resource-card">
+                <p class="resource-meta">Tutorial • February 2026</p>
+                <h3>Excel tricks for CSV cleanup</h3>
+                <p>
+                  Build reliable export processes from Excel by enforcing one header format, removing hidden characters, and
+                  validating delimiters before import into analytics tools.
+                </p>
+                <p>Spreadsheet automation tips:</p>
+                <ul>
+                  <li>Standardize column naming to snake_case on every export.</li>
+                  <li>Strip formula-like or wrapped quotes only after confirming cell content.</li>
+                  <li>Export smaller CSV slices for QA before processing full files.</li>
+                </ul>
+              </article>
+
+              <article id="python-csv" class="resource-card">
+                <p class="resource-meta">Tutorial • February 2026</p>
+                <h3>Python CSV scripts for CSV cleanup</h3>
+                <p>
+                  For repeatable data prep, combine Python scripts with this browser tool: script bulk normalization for
+                  heavy tasks, then use local preview cleanup and manual review on edge cases.
+                </p>
+                <p>Script-first checklist:</p>
+                <ul>
+                  <li>Log each transformation to keep change history.</li>
+                  <li>Keep scripts idempotent so reruns are stable.</li>
+                  <li>Use strict schema checks for critical columns.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Use cases</h2>
+            <div class="use-cases">
+              <div class="report-card"><strong>Marketing:</strong> clean campaign exports before reporting.</div>
+              <div class="report-card"><strong>Finance:</strong> normalize dates and numbers before review.</div>
+              <div class="report-card"><strong>Data ops:</strong> trim, dedupe, and validate incoming feeds automatically.</div>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>Suggested next step</h2>
+            <p>
+              Export your cleaned file and share with your analytics, BI, or accounting workflow. If a cleanup issue keeps
+              recurring, save a profile and reuse it in one click.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
