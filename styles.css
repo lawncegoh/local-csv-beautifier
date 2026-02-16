@@ -189,10 +189,10 @@ textarea {
 }
 
 .btn-guide {
-  color: #04233a;
-  border: 1px solid #0ea5a5;
-  background: linear-gradient(135deg, #ccfbf1 0%, #d9f99d 100%);
-  border-radius: 999px;
+  color: #ffffff;
+  border: 1px solid #0f766e;
+  background: #14b8a6;
+  border-radius: 10px;
   padding-inline: 16px;
   letter-spacing: 0.01em;
   font-weight: 700;
@@ -201,6 +201,7 @@ textarea {
 }
 
 .btn-guide:hover {
+  background: #0f9488;
   box-shadow: 0 8px 18px rgba(14, 165, 165, 0.24);
   transform: translateY(-1px);
 }
@@ -217,9 +218,11 @@ textarea {
   padding: 16px 0 4px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .footer-tab {
@@ -236,12 +239,18 @@ textarea {
   text-decoration: underline;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
 .footer-note {
   margin: 0;
   color: var(--muted);
   font-size: 0.86rem;
-  width: 100%;
-  text-align: center;
 }
 
 .resource-grid {
