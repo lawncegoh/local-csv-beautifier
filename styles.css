@@ -245,6 +245,19 @@ textarea {
   margin: 0 0 6px;
 }
 
+.resource-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #1f6feb;
+  text-decoration: none;
+}
+
+.resource-link:hover,
+.resource-link:focus {
+  text-decoration: underline;
+}
+
 .status {
   padding: 10px 12px;
   border-radius: 10px;

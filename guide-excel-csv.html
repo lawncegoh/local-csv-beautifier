@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel-to-CSV cleanup tricks | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Practical tips for fixing common Excel export issues before CSV cleanup, including delimiters, quoting, and schema-safe preprocessing."
+    />
+    <meta name="keywords" content="excel csv cleanup, spreadsheet automation tips, delimiter issues, csv normalize" />
+    <link rel="canonical" href="https://your-domain.com/guide-excel-csv.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>Excel-to-CSV cleanup tricks</h1>
+        <p>Stop fighting export quirks by standardizing Excel files before they hit your CSV pipeline.</p>
+      </header>
+
+      <section class="card">
+        <h2>1) Control formatting before export</h2>
+        <p>
+          The cleanest approach is to prepare the sheet before export: remove merged cells, freeze formatting artifacts,
+          and keep headers in one row with stable names.
+        </p>
+        <ul>
+          <li>Export with plain text for numeric columns when possible.</li>
+          <li>Standardize date cells to a consistent display format before conversion.</li>
+          <li>Remove trailing spaces in formulas and notes that may become part of values.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2) Handle common Excel CSV edge cases</h2>
+        <p>
+          Excel may add unexpected delimiter behavior depending on regional settings. If you see wrong column splits,
+          treat delimiter as a data contract, not an afterthought.
+        </p>
+        <ul>
+          <li>Force a known delimiter in your export flow.</li>
+          <li>Verify quote handling for text with commas.</li>
+          <li>Check for empty columns that are only intermittently populated.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3) Build a spreadsheet automation pass</h2>
+        <p>
+          For recurring Excel sources, automate the source cleanup:
+          normalize headers, strip extra spaces, and replace common null-like values before analysts load the file.
+        </p>
+        <ul>
+          <li>Create one cleaning profile per export template.</li>
+          <li>Generate a small QA sample and archive it with the original source.</li>
+          <li>Require one owner to approve the transformation order when source schema changes.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4) Use local-first browser cleanup as final guardrail</h2>
+        <p>
+          Even with strong Excel rules, keep a local browser cleanup step before distribution so null values, duplicates,
+          and naming issues are visibly fixed before final handoff.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <a class="footer-tab" href="index.html#ad-support">Ads</a>
+    </footer>
+  </body>
+</html>

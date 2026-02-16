@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python CSV scripts for cleanup workflows | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Design reliable Python CSV cleanup scripts for large files, then combine with local preview tools for final manual quality checks."
+    />
+    <meta name="keywords" content="python csv script, csv automation, pandas cleanup, local csv processing" />
+    <link rel="canonical" href="https://your-domain.com/guide-python-csv.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>Python scripts for CSV cleanup</h1>
+        <p>Build script-driven, repeatable transformations and keep the browser cleanup step as validation.</p>
+      </header>
+
+      <section class="card">
+        <h2>1) Treat script cleanups as pipelines</h2>
+        <p>
+          A clean pipeline should have an explicit order. The most stable order is parse, normalize schema, type-check,
+          then write. Keep this explicit in code and documentation.
+        </p>
+        <ul>
+          <li>Read with explicit encoding and delimiter strategy.</li>
+          <li>Drop malformed rows to a dead-letter file if your process requires strict schema.</li>
+          <li>Normalize null-like values and whitespace consistently in one pass.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2) Use idempotent transforms</h2>
+        <p>
+          If a script run twice changes output each time, debugging becomes expensive. Idempotent operations make reruns safe
+          and reduce confusion between script and UI steps.
+        </p>
+        <ul>
+          <li>Log each action and file hash for every step.</li>
+          <li>Avoid random ordering in dedupe operations.</li>
+          <li>Preserve original values in a change log for audits.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3) Validate before and after</h2>
+        <p>
+          Script output should be checked with measurable rules: row counts, null density, duplicate rate, and schema drift.
+          Use spot checks in a browser tool for contextual validation (header names, sample rows, edge cases).
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>4) Blend with local-first QA</h2>
+        <p>
+          Use Python for large transformations and bulk workloads, then pass a sample through local cleanup UI before publication.
+          It is faster and catches presentation issues (like delimiters and quoting) that automated scripts may overlook.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <a class="footer-tab" href="index.html#ad-support">Ads</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to clean large datasets fast | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Step-by-step workflow for cleaning large CSV files faster with deterministic, low-risk passes and browser-first tooling."
+    />
+    <meta name="keywords" content="clean large csv, dataset cleanup workflow, csv deduplication, csv performance" />
+    <link rel="canonical" href="https://your-domain.com/guide-large-datasets.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>How to clean large datasets fast</h1>
+        <p>A practical, low-risk workflow for 1) structure, 2) normalization, 3) de-duplication, and 4) validation.</p>
+      </header>
+
+      <section class="card">
+        <h2>1) Start with structure, not transformation</h2>
+        <p>
+          Large files fail fastest on guesswork. Before changing values, inspect row length, delimiter consistency, and header names.
+          If a file has mixed delimiter use, fix one parsing strategy first so every row lands in expected columns.
+        </p>
+        <ul>
+          <li>Check if headers are unique; duplicate names should be handled first.</li>
+          <li>Remove empty rows and placeholder rows at the top/bottom.</li>
+          <li>Validate column counts across sample slices before batch edits.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2) Canonicalize values in stable order</h2>
+        <p>
+          Apply the same transformation order every run. This makes cleanup reproducible and helps avoid corrupting meaning:
+          trim spaces, normalize header names, normalize null-like tokens, then clean dates/numbers.
+        </p>
+        <p>
+          In a local browser tool, this sequence is fast because each pass is predictable and reversible in the export log.
+          For bigger files, save profiles and rerun exactly the same checks.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>3) Deduplicate safely</h2>
+        <p>
+          Remove duplicate rows only after headers and types are stable. If the tool supports it, prefer full-row dedupe and
+          then create a quick sample review before exporting final data.
+        </p>
+        <ul>
+          <li>Compare dedupe results against pre-clean sample slices.</li>
+          <li>Keep a backup of the original raw file export.</li>
+          <li>Store the profile that defines your final pass order.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4) Validate and export</h2>
+        <p>
+          Use row preview and change logs to catch false positives (dates mistaken as numbers, quotes removed unexpectedly, etc.).
+          Then export once the full profile is stable.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <a class="footer-tab" href="index.html#ad-support">Ads</a>
+    </footer>
+  </body>
+</html>
