@@ -12,23 +12,57 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSV Cleanup Guides | Local CSV Beautifier</title>
+    <title>CSV Cleanup and Excel Tutorials | Local CSV Beautifier</title>
     <meta
       name="description"
-      content="Practical CSV cleanup tutorials for anyone who wants to clean messy CSV file online, including large datasets, Excel integration, and reusable workflows."
+      content="Practical CSV cleanup tutorials for anyone who wants to clean messy CSV files online, including Excel-specific workflows, large datasets, and reliable formatting for spreadsheet imports."
     />
     <meta
       name="keywords"
-      content="clean messy csv file online, convert semicolon csv to comma, how to remove null rows from csv, format csv for excel"
+      content="clean messy csv file online, convert semicolon csv to comma, how to remove null rows from csv, format csv for excel, csv cleanup guides, Excel csv formatting"
     />
     <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Local CSV Beautifier" />
+    <meta
+      property="og:title"
+      content="CSV Cleanup and Excel Tutorials | Local CSV Beautifier"
+    />
+    <meta
+      property="og:description"
+      content="Step-by-step tutorials for CSV cleanup, Excel compatibility, delimiter conversion, and null-row removal."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/resources.html" />
     <link rel="canonical" href="https://your-domain.com/resources.html" />
     <link rel="stylesheet" href="styles.css" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CSV Cleanup and Excel Tutorials | Local CSV Beautifier"
+    />
+    <meta
+      name="twitter:description"
+      content="CSV cleanup, Excel formatting, and data prep tutorials for cleaner exports and local-first workflows."
+    />
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
       crossorigin="anonymous"
     ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "CSV cleanup and Excel tutorials",
+        "url": "https://your-domain.com/resources.html",
+        "description": "Hands-on guides for cleaning CSV files online, fixing Excel delimiter and formatting issues, and preparing reliable exports.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Local CSV Beautifier",
+          "url": "https://your-domain.com/"
+        }
+      }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -36,15 +70,16 @@
         <a class="btn ghost" href="index.html">← Back to tool</a>
       </div>
       <header class="hero">
-        <h1>CSV cleanup and data cleaning resources</h1>
+        <h1>CSV cleanup and Excel tutorials</h1>
         <p>
-          Practical guides for spreadsheet cleanup: CSV cleanup, spreadsheet automation tips, and safe workflows for fast cleaning.
+          Practical guides for CSV cleanup and Excel workflows: clean messy CSV files online, fix delimiter issues,
+          remove null rows, and prepare accurate imports from spreadsheets.
         </p>
       </header>
 
       <section class="resource-shell">
         <section class="card">
-          <h2>Latest guides</h2>
+          <h2>Latest guides (CSV + Excel focus)</h2>
           <div class="resource-grid">
             <article id="clean-large" class="resource-card">
               <p class="resource-meta">Tutorial • January 2026</p>
@@ -102,6 +137,60 @@
               </ul>
               <p>
                 <a href="guide-python-csv.html" class="resource-link">Read full guide →</a>
+              </p>
+            </article>
+
+            <article id="delimiter-to-comma" class="resource-card">
+              <p class="resource-meta">Tutorial • February 2026</p>
+              <h3>Convert semicolon CSV to comma for Excel</h3>
+              <p>
+                Learn how regional Excel settings can produce semicolon-delimited exports, and how to convert them
+                safely to comma-delimited files without breaking quoted fields.
+              </p>
+              <p>
+                The workflow in this guide covers delimiter detection, separator replacement, and validation using a sample.
+              </p>
+              <ul>
+                <li>Detect whether semicolon is used as a list separator in source files.</li>
+                <li>Preview a few rows after conversion before running full cleanup.</li>
+                <li>Normalize headers and whitespace to prepare for downstream analysis.</li>
+              </ul>
+              <p>
+                <a href="guide-delimiter-to-comma.html" class="resource-link">Read full guide →</a>
+              </p>
+            </article>
+
+            <article id="format-for-excel" class="resource-card">
+              <p class="resource-meta">Tutorial • February 2026</p>
+              <h3>Format CSV for Excel without import errors</h3>
+              <p>
+                If your columns are misaligned in Excel, this guide helps you control quoting, delimiter, text fields,
+                and date shape so your spreadsheet loads predictably.
+              </p>
+              <ul>
+                <li>Use consistent text quoting for values containing commas or new lines.</li>
+                <li>Set one canonical header style before teams import the file.</li>
+                <li>Validate date and number formats using a dry run sample.</li>
+              </ul>
+              <p>
+                <a href="guide-format-csv-for-excel.html" class="resource-link">Read full guide →</a>
+              </p>
+            </article>
+
+            <article id="remove-null-rows" class="resource-card">
+              <p class="resource-meta">Tutorial • February 2026</p>
+              <h3>Remove null rows from CSV at scale</h3>
+              <p>
+                Remove blank and null-like rows in a repeatable way while avoiding accidental deletion of valid sparse rows.
+                This is the core step for clean reporting pipelines.
+              </p>
+              <ul>
+                <li>Define what null means for your process (empty, NA, NULL, N/A).</li>
+                <li>Normalize values before row-level filtering.</li>
+                <li>Export a post-clean sample and compare row counts for auditability.</li>
+              </ul>
+              <p>
+                <a href="guide-remove-null-rows.html" class="resource-link">Read full guide →</a>
               </p>
             </article>
           </div>

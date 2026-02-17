@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to remove null rows from CSV | Data cleanup tutorial</title>
+    <meta
+      name="description"
+      content="Step-by-step process to remove null rows from CSV files while avoiding accidental deletion of valid sparse data."
+    />
+    <meta
+      name="keywords"
+      content="how to remove null rows from csv, null row cleanup, csv cleaning pipeline, empty row removal"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://your-domain.com/guide-remove-null-rows.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to remove null rows from CSV" />
+    <meta
+      name="twitter:description"
+      content="Learn how to remove null rows from CSV carefully with preview-first validation."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to remove null rows from CSV",
+        "description": "Guide for removing null-like rows from large exports with safe validation and reversible workflow.",
+        "author": {
+          "@type": "Organization",
+          "name": "Local CSV Beautifier"
+        },
+        "datePublished": "2026-02-17"
+      }
+    </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>How to remove null rows from CSV</h1>
+        <p>
+          Use a deliberate workflow: define null-like values, sanitize first, then remove rows with predictable checks.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>1) Define what counts as a null row</h2>
+        <p>
+          Decide if null-like values include blank cells, only delimiters, or tokens like <code>NA</code>, <code>null</code>,
+          and <code>N/A</code>. Consistent definitions improve repeatability.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2) Clean before removing</h2>
+        <p>
+          Normalize null-like strings and whitespace first so rows that “look” valid are not accidentally removed.
+        </p>
+        <ul>
+          <li>Trim whitespace across every field.</li>
+          <li>Normalize missing-value tokens to empty strings.</li>
+          <li>Validate row length after normalization.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3) Remove and verify</h2>
+        <p>
+          Remove rows in one pass and compare row counts before/after. Keep a sample of source and cleaned rows for audit.
+        </p>
+        <ul>
+          <li>Run on a small slice first.</li>
+          <li>Export the diff or change report if needed.</li>
+          <li>Use a second reviewer for critical business files.</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
