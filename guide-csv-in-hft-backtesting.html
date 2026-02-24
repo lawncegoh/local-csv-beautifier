@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV in high-frequency data prep: from raw feeds to normalized events</title>
+    <meta
+      name="description"
+      content="How CSV and CSV-like feeds are used in data preparation for high-frequency backtesting, including ordering, timestamp handling, snapshot strategy, and conversion output."
+    />
+    <meta
+      name="keywords"
+      content="csv hft backtesting, tick data csv, csv.gz parsing, data normalization, order event order, timestamp correction, market data prep"
+    />
+    <link rel="canonical" href="https://your-domain.com/guide-csv-in-hft-backtesting.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>CSV in high-frequency data prep: from raw feeds to normalized events</h1>
+        <p>
+          High-frequency datasets are often first seen as messy files:
+          JSON-by-line captures, compressed archives, separate trade and book feeds, and large CSV files.
+          This guide summarizes practical CSV handling patterns from the official HftBacktest data prep flow.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Why CSV still appears in HFT pipelines</h2>
+        <p>
+          Even when source streams are JSON, vendors and exchange dumps can deliver data as compressed CSV files
+          with extensions like <code>.csv.gz</code>. The preparation pipeline in HftBacktest is useful as a pattern:
+          normalize data into a compact event table before simulation, regardless of original format.
+        </p>
+        <ul>
+          <li>Trades and incremental books can be delivered as separate CSV files.</li>
+          <li>Large files are often compressed to reduce bandwidth and storage.</li>
+          <li>Conversion tools ingest these files and emit structured arrays, which simplifies downstream steps.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Most important CSV-specific details for backtesting quality</h2>
+        <h3>1) Event order and timestamps are critical</h3>
+        <p>
+          Timestamp quality matters more than format choice:
+        </p>
+        <ul>
+          <li>The first token in raw Binance lines is the local receive timestamp (nanoseconds).</li>
+          <li>Exchange timestamp and local timestamp can drift; conversion logic explicitly prints and corrects latency.</li>
+          <li>The same conversion step also corrects event ordering when timestamps conflict or arrive out of order.</li>
+        </ul>
+
+        <h3>2) Input file order controls realism</h3>
+        <p>
+          When combining feed files, recommendation is to input trade files before depth/book files.
+          If a depth update is caused by a trade, placing trade first improves realism in fills.
+        </p>
+        <p>
+          When two events share the same timestamp, the conversion flow prioritizes events from the first input file.
+        </p>
+
+        <h3>3) File size and memory planning</h3>
+        <p>
+          For very large CSV inputs, output conversion may require a larger <code>buffer_size</code> argument.
+          This is a practical point for CSV pipelines: the same dataset can parse but fail or slow down with default buffers.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>What the normalized structure looks like after CSV prep</h2>
+        <p>
+          HftBacktest normalizes input into an event table with consistent columns and types.
+          Typical fields include:
+        </p>
+        <ul>
+          <li>event code (trade/depth event indicator)</li>
+          <li>exchange timestamp</li>
+          <li>local timestamp</li>
+          <li>price, quantity, order identifiers</li>
+          <li>internal numeric fields used for simulation state</li>
+        </ul>
+        <p>
+          Persisting to a binary output (for example, <code>.npz</code>) is part of the workflow, but the lesson
+          is reusable: use CSV only for intake, then convert to a strict schema as soon as possible.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Market depth snapshots and daily continuity</h2>
+        <p>
+          For exchange backtesting, initial order book state matters. The guide describes snapshot behavior and
+          notes that some providers inject snapshots at start of day. If backtesting spans days, you can avoid redundant
+          snapshot loading by carrying forward suitable initial-state files.
+        </p>
+        <ul>
+          <li>Build or keep a day-end snapshot for next-day continuity.</li>
+          <li>Validate that your snapshot depth format is consistent with your event feed.</li>
+          <li>Do not assume all provider snapshots represent exchange-engine timing.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Source note</h2>
+        <p>
+          This article is based on patterns shown in
+          <a href="https://hftbacktest.readthedocs.io/en/latest/tutorials/Data%20Preparation.html">
+            HftBacktest: Data Preparation
+          </a>.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
