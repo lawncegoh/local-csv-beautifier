@@ -39,7 +39,8 @@
           "@type": "Organization",
           "name": "Local CSV Beautifier"
         },
-        "datePublished": "2026-02-17"
+        "datePublished": "2026-02-17",
+        "dateModified": "2026-02-25"
       }
     </script>
     <script
@@ -90,8 +91,32 @@
           Build a repeatable profile that enforces one delimiter policy. Save it and reuse for the same source system.
         </p>
       </section>
+
+      <section class="card">
+        <h2>4) Real-world checklist before you run full conversion</h2>
+        <ul>
+          <li>Validate the delimiter on at least 50 rows in the first pass.</li>
+          <li>Confirm row counts and header names are unchanged after conversion.</li>
+          <li>Ensure quoted text containing commas keeps quote boundaries intact.</li>
+          <li>Verify that numeric-like fields did not lose leading zeros.</li>
+          <li>Export a source-cleaned sample for one human review before bulk processing.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5) Sample input/output</h2>
+        <p>Raw export (semicolon delimiter):</p>
+        <pre><code>id;date;amount;notes
+12;2026-02-20;1,200;value, revised
+13;2026-02-21;900;plain value</code></pre>
+        <p>Output after conversion and quoting cleanup:</p>
+        <pre><code>id,date,amount,notes
+12,2026-02-20,"1,200","value, revised"
+13,2026-02-21,900,plain value</code></pre>
+      </section>
     </main>
     <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
       <a class="footer-tab" href="compliance.html">Compliance</a>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>

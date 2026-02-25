@@ -81,8 +81,19 @@
           It is faster and catches presentation issues (like delimiters and quoting) that automated scripts may overlook.
         </p>
       </section>
+
+      <section class="card">
+        <h2>5) Sample governance pattern</h2>
+        <ol>
+          <li>Define source schema and null behavior in a markdown readme.</li>
+          <li>Create one deterministic script version per source system.</li>
+          <li>Run a 1k row smoke test and compare with manual checks.</li>
+          <li>Promote the same output profile to the browser for final sign-off.</li>
+        </ol>
+      </section>
     </main>
     <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
       <a class="footer-tab" href="compliance.html">Compliance</a>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>

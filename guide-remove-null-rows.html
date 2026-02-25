@@ -39,7 +39,8 @@
           "@type": "Organization",
           "name": "Local CSV Beautifier"
         },
-        "datePublished": "2026-02-17"
+        "datePublished": "2026-02-17",
+        "dateModified": "2026-02-25"
       }
     </script>
     <script
@@ -91,8 +92,18 @@
           <li>Use a second reviewer for critical business files.</li>
         </ul>
       </section>
+
+      <section class="card">
+        <h2>4) Example: null-like token policy</h2>
+        <p>
+          If your file uses mixed missing-value conventions, define a single mapping before cleanup:
+          <code>["", " ", "-", "NA", "N/A", "NULL", "null", "None"]</code>.
+          This avoids accidental row retention due to formatting differences.
+        </p>
+      </section>
     </main>
     <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
       <a class="footer-tab" href="compliance.html">Compliance</a>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>

@@ -89,8 +89,28 @@
         </p>
         <p>This step is also where you should confirm null rows are removed if your objective includes how to remove null rows from csv.</p>
       </section>
+
+      <section class="card">
+        <h2>5) Safety controls for production scale</h2>
+        <p>For very large files, keep one guardrail set enabled:</p>
+        <ul>
+          <li>Run each profile first on 10,000 rows or 1MB, whichever is smaller.</li>
+          <li>Capture a before/after row-count and column-count report.</li>
+          <li>Write a timestamped change note for every run profile variant.</li>
+          <li>Archive raw file + cleaned file + report so incidents can be audited.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>6) Why this scales</h2>
+        <p>
+          This workflow performs best because each pass is deterministic and independent. That means you can rerun only when
+          input assumptions change, not every time a teammate needs a slightly different export.
+        </p>
+      </section>
     </main>
     <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
       <a class="footer-tab" href="compliance.html">Compliance</a>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>

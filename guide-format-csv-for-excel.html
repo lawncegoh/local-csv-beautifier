@@ -39,7 +39,8 @@
           "@type": "Organization",
           "name": "Local CSV Beautifier"
         },
-        "datePublished": "2026-02-17"
+        "datePublished": "2026-02-17",
+        "dateModified": "2026-02-25"
       }
     </script>
     <script
@@ -92,8 +93,30 @@
           Set date and number normalization before upload to avoid Excel auto-converting values differently across versions and locales.
         </p>
       </section>
+
+      <section class="card">
+        <h2>4) Validate with edge test rows</h2>
+        <ul>
+          <li>Test one date at timezone boundary and one negative amount before running full file.</li>
+          <li>Check for leading zeros in IDs and phone numbers.</li>
+          <li>Verify comma-containing text uses consistent quotes in both sample and export.</li>
+          <li>Confirm the same export opens reliably on both Windows and macOS clients.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5) Minimal fallback template</h2>
+        <p>If your source is from an unstable template, use this sequence:</p>
+        <ol>
+          <li>Normalize headers and remove empty rows.</li>
+          <li>Normalize quotes and delimiter.</li>
+          <li>Set date strategy (`YYYY-MM-DD`) and number strategy (`.` decimal).</li>
+          <li>Run preview, then re-export.</li>
+        </ol>
+      </section>
     </main>
     <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
       <a class="footer-tab" href="compliance.html">Compliance</a>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
