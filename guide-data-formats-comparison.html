@@ -126,6 +126,52 @@
           <li><strong>Sharing/export:</strong> publish CSV exports where needed for human workflows.</li>
         </ul>
       </section>
+
+      <section class="card">
+        <h2>Quick decision matrix</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Use case</th>
+              <th>Preferred format</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Manual inspection</td>
+              <td>CSV</td>
+              <td>Human-readable, works in editors and spreadsheet tools.</td>
+            </tr>
+            <tr>
+              <td>OLAP queries or Spark/SQL engines</td>
+              <td>Parquet</td>
+              <td>Columnar storage avoids unnecessary scans for few columns.</td>
+            </tr>
+            <tr>
+              <td>Event logs, nested payloads</td>
+              <td>JSON / Avro</td>
+              <td>Preserves structure before flattening.</td>
+            </tr>
+            <tr>
+              <td>Long-term archive</td>
+              <td>Parquet/ORC</td>
+              <td>Strong compression and predictable analytical performance.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Editorial note: why format choice depends on people too</h2>
+        <p>
+          Technical format discussions are often about performance only. In practice, team capability matters just as much.
+          If your analysts and contractors expect CSV, CSV exports are still essential even when the source of truth uses Parquet.
+        </p>
+        <p>
+          Treat this as two-file architecture: keep one production format and one operational sharing format.
+        </p>
+      </section>
     </main>
     <footer class="site-footer">
       <a class="footer-tab" href="compliance.html">Compliance</a>

@@ -89,6 +89,49 @@
           and naming issues are visibly fixed before final handoff.
         </p>
       </section>
+
+      <section class="card">
+        <h2>5) Example you can adapt</h2>
+        <p>
+          Use a tiny source sample to test behavior before running the whole file:
+        </p>
+        <pre><code>name, Amount ;Note
+Revenue,1 200 , good
+ Revenue ,1,300,bad
+Revenue,1 200 ,
+Revenue,1 200 , good</code></pre>
+        <p>Expected cleaned output (after delimiter set + trim + normalize nulls):</p>
+        <pre><code>name,amount,note
+revenue,1200,good
+revenue,1300,bad
+revenue,1200,
+revenue,1200,good</code></pre>
+        <p>The sequence that produces this is:</p>
+        <ul>
+          <li>Set delimiter to semicolon or comma only after confirming detected separator.</li>
+          <li>Enable trim + normalize nulls.</li>
+          <li>Enable header normalization and duplicate-safe dedupe checks.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>6) When users still get bad output</h2>
+        <p>Common failure signals and the fix:</p>
+        <ul>
+          <li>
+            <strong>Columns shifted:</strong> verify that text values containing commas or semicolons are quoted in Excel before export.
+          </li>
+          <li>
+            <strong>Date parsing mismatches:</strong> standardize date format in Excel or use the date normalization step.
+          </li>
+          <li>
+            <strong>Hidden formula artifacts:</strong> convert formulas to values on the source sheet before export.
+          </li>
+          <li>
+            <strong>Unexpected blanks:</strong> check for placeholder values like <code>-</code>, <code>NA</code>, and double spaces.
+          </li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
       <a class="footer-tab" href="compliance.html">Compliance</a>

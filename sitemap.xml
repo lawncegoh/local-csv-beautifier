@@ -6,6 +6,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://your-domain.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://your-domain.com/resources.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

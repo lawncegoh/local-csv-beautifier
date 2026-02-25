@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn what Local CSV Beautifier is, how the tool is built, and the exact workflow we use to produce reliable in-browser CSV cleanup." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Local CSV Beautifier" />
+    <meta property="og:title" content="About Local CSV Beautifier" />
+    <meta
+      property="og:description"
+      content="A practical guide to local CSV cleaning quality: what we fix, how we do it, and how you should review results."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/about.html" />
+    <link rel="canonical" href="https://your-domain.com/about.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>About Local CSV Beautifier</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Local CSV Beautifier",
+        "url": "https://your-domain.com/about.html",
+        "description": "Methodology, privacy model, and team guidance behind the local CSV cleanup workflow."
+      }
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>About Local CSV Beautifier</h1>
+        <p>
+          This project exists to make messy spreadsheet data usable without sending it to a backend.
+          The focus is utility and editorial usefulness: useful tools plus clear, practical guidance pages.
+        </p>
+        <div class="actions">
+          <a class="btn ghost" href="index.html">Back to tool</a>
+          <a class="btn ghost" href="resources.html">Read all guides</a>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2>What this site is for</h2>
+        <p>
+          We are not an AI chatbot or hidden data service. This is a browser-first utility designed to remove common
+          blockers in CSV workflows: inconsistent headers, duplicate rows, whitespace noise, and fragile date/number formats.
+        </p>
+        <ul>
+          <li>Fast in-browser processing for direct user control.</li>
+          <li>Simple cleanup operations with explicit toggles.</li>
+          <li>Preview and change logs for review before any export.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Quality principles</h2>
+        <p>We prioritize clarity over cleverness.</p>
+        <ul>
+          <li>
+            <strong>Deterministic:</strong> the same input and options produce the same output.
+          </li>
+          <li>
+            <strong>Visible:</strong> every major transform is observable in report output.
+          </li>
+          <li>
+            <strong>Safe:</strong> no CSV contents are uploaded, and all processing remains local.
+          </li>
+          <li>
+            <strong>Reusable:</strong> profile save/load allows repeatable cleanup standards across teams.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>How to review outputs (recommended)</h2>
+        <ol>
+          <li>Run the cleaner on a 20-row sample and check all changed columns.</li>
+          <li>Verify header consistency before enabling duplicate removal.</li>
+          <li>Only then process the full file and compare row counts.</li>
+          <li>Keep the cleaned file for downstream testing before final distribution.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Editorial scope of this site</h2>
+        <p>
+          Guides here are intentionally practical. We publish examples, edge cases, and process checks so each page can be
+          reused in real workflows, not just generic keyword-driven tutorials.
+        </p>
+        <ul>
+          <li><a href="guide-large-datasets.html">How to clean large datasets</a></li>
+          <li><a href="guide-data-formats-comparison.html">CSV vs Parquet format guidance</a></li>
+          <li><a href="guide-data-csv-hft-backtesting.html">CSV in HFT data preparation</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
