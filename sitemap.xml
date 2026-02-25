@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-domain.com/</loc>
+    <loc>/</loc>
     <changefreq>weekly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/about.html</loc>
+    <loc>/about.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/resources.html</loc>
+    <loc>/resources.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-large-datasets.html</loc>
+    <loc>/guide-large-datasets.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-excel-csv.html</loc>
+    <loc>/guide-excel-csv.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-python-csv.html</loc>
+    <loc>/guide-python-csv.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-delimiter-to-comma.html</loc>
+    <loc>/guide-delimiter-to-comma.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-format-csv-for-excel.html</loc>
+    <loc>/guide-format-csv-for-excel.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-remove-null-rows.html</loc>
+    <loc>/guide-remove-null-rows.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-data-cleansing.html</loc>
+    <loc>/guide-data-cleansing.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-data-formats-comparison.html</loc>
+    <loc>/guide-data-formats-comparison.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/guide-csv-in-hft-backtesting.html</loc>
+    <loc>/guide-csv-in-hft-backtesting.html</loc>
     <changefreq>monthly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/compliance.html</loc>
+    <loc>/compliance.html</loc>
     <changefreq>yearly</changefreq>
     <lastmod>2026-02-25</lastmod>
     <priority>0.3</priority>
