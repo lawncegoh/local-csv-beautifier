@@ -37,11 +37,11 @@ Open `index.html` and load a file or paste CSV text.
 
 ## SEO setup for production
 
-- Replace all `https://your-domain.com/` placeholders in:
+- Replace all `https://csvcleanersecure.org/` placeholders in:
   - `index.html` (`canonical`, OG/Twitter metadata, JSON-LD URL)
   - `robots.txt`
   - `sitemap.xml`
-- Add a real `og-image.svg` or `og-image.png` matching the `og:image` URL.
+- Confirm a real `og-image.svg` or `og-image.png` is available and matches the `og:image` URL.
 - Add one or two pages with real examples and link them from the homepage.
 - Keep titles and headings focused on real search terms, for example:
   - `local CSV cleaner`
