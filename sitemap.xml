@@ -79,3 +79,33 @@
     <priority>0.3</priority>
   </url>
 </urlset>
+  <url>
+    <loc>/guide-csv-data-cleaning-checklist.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/guide-excel-csv-import-pitfalls.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/guide-csv-schema-validation.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/guide-csv-date-number-cleaning.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/guide-python-csv-automation-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>

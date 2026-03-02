@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}      
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel to CSV import pitfalls and fixes | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Stop common Excel to CSV import failures. Learn how separator, locale, quoting, and date settings break imports and how to fix them before sharing files."
+    />
+    <meta
+      name="keywords"
+      content="excel to csv import, csv excel delimiter, excel export commas semicolon, malformed csv excel"
+    />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-excel-csv-import-pitfalls.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>Excel CSV import pitfalls and fixes</h1>
+        <p>
+          Excel creates CSV outputs that look simple but often include hidden behaviors. This guide covers the issues that
+          break downstream systems and how to correct them in a repeatable way.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Pitfall: regional separator mismatch</h2>
+        <p>
+          In some regional setups Excel uses semicolon as default list separator. In those files, commas and decimals can
+          appear inconsistent and break import logic.
+        </p>
+        <ul>
+          <li>Confirm delimiter before importing by inspecting the first sample lines.</li>
+          <li>Convert semicolon delimiters to commas in a controlled step.</li>
+          <li>Keep text quoting consistent during conversion.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Pitfall: hidden formatting in text columns</h2>
+        <p>
+          Excel can store leading zeros and special text forms. Exporting may remove what appears to be numeric shape while
+          still preserving display formatting.
+        </p>
+        <ul>
+          <li>Pre-format identifier fields as text before export.</li>
+          <li>Preserve exact column names so downstream mappings do not drift.</li>
+          <li>Use row samples to confirm leading zeros remain intact.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Pitfall: date serials and locale date shapes</h2>
+        <p>
+          Spreadsheet date values may appear as serial numbers or locale-based strings. Both can become invalid if your
+          parser expects one format.
+        </p>
+        <ul>
+          <li>Normalize date columns to ISO format before exchange.</li>
+          <li>Handle Excel serial numbers with explicit origin date conversion.</li>
+          <li>Validate for mixed date patterns in the same column.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Pitfall: newline and quote breakage</h2>
+        <p>
+          Cells containing line breaks or comma-like punctuation can become unreadable without proper quoting.
+          This is a top cause of row shifts.
+        </p>
+        <ul>
+          <li>Enforce RFC style CSV quoting for fields with commas and line breaks.</li>
+          <li>Check for broken quote counts in a pre-import validation pass.</li>
+          <li>Keep preview rows to verify every column boundary.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>A stable import playbook</h2>
+        <ol>
+          <li>Profile source with a tiny sample.</li>
+          <li>Fix separator and quoting behavior.</li>
+          <li>Normalize text, dates, and numeric formats.</li>
+          <li>Run null and schema checks before sharing with downstream systems.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}      
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV date and number cleaning for reliable reports | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Fix date and number format issues from CSV and Excel workflows: decimal separators, thousands markers, date serials, and stable numeric parsing."
+    />
+    <meta
+      name="keywords"
+      content="csv date format, clean numbers in csv, decimal separator csv, excel date serial, csv currency cleanup"
+    />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-csv-date-number-cleaning.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>CSV date and number cleaning</h1>
+        <p>
+          Many broken analytics pipelines start with one small formatting mismatch. This guide focuses on the highest-value
+          corrections for dates and numbers in CSV and spreadsheet-driven exports.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Unify date format policy</h2>
+        <p>
+          Pick one canonical date standard and apply it everywhere. The safest default for teams and automation is
+          ISO date formatting (YYYY-MM-DD).
+        </p>
+        <ul>
+          <li>Convert all date columns before numeric or textual joins.</li>
+          <li>Reject ambiguous date forms such as 12/03/2026 until resolved.</li>
+          <li>Normalize timezone-aware timestamps into one strategy.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Handle locale number formatting</h2>
+        <p>
+          Thousand separators, decimal separators, and currency symbols change by locale. Inconsistent number parsing is a
+          common source of metric drift.
+        </p>
+        <ul>
+          <li>Define decimal separator expectation per source.</li>
+          <li>Remove currency symbols before numeric conversion.</li>
+          <li>Normalize negative values and sign placement.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Excel date serials and large integer precision</h2>
+        <p>
+          Excel often stores date values as serial numbers. Large identifiers and IDs can also be rewritten in scientific notation
+          by downstream tools.
+        </p>
+        <ul>
+          <li>Convert date serial values using explicit origin logic.</li>
+          <li>Store identifiers as text when precision matters.</li>
+          <li>Format large integers with enough width before export.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Validation checks before publish</h2>
+        <p>
+          After transformation, validate for impossible dates, invalid numbers, and type mismatches. This catches hidden
+          corruption before downstream systems fail.
+        </p>
+        <ul>
+          <li>Check for date ranges outside business bounds.</li>
+          <li>Detect mixed decimal separators in the same column.</li>
+          <li>Block files with unresolved numeric tokens.</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

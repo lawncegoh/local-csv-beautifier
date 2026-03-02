@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}      
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV data cleaning checklist: build a repeatable process | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Use a practical CSV data cleaning checklist for local-first workflows covering profiling, null handling, dedupe, and post-clean validation."
+    />
+    <meta
+      name="keywords"
+      content="csv cleaning checklist, data cleaning workflow, csv quality checks, dedupe csv, remove null rows"
+    />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-csv-data-cleaning-checklist.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>CSV data cleaning checklist</h1>
+        <p>
+          A repeatable checklist reduces errors and keeps CSV cleanup stable across teams.
+          Apply the same sequence every time so output is predictable, auditable, and easier to trust.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Set the acceptance rules before touching data</h2>
+        <p>
+          Before cleaning, define the expected schema and error policy for each column. If possible, write this down as a small
+          quality contract with allowed delimiters, mandatory columns, and null behavior.
+        </p>
+        <ul>
+          <li>Fix names for required columns up front.</li>
+          <li>Define what is considered null for every field.</li>
+          <li>Define duplicate criteria before dedupe.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Checklist step 1: profile first</h2>
+        <p>
+          Data profiling gives you a baseline so you can estimate cleanup scope. A bad clean without profiling usually
+          means hidden assumptions and later regressions.
+        </p>
+        <ul>
+          <li>Count rows, columns, and average field lengths.</li>
+          <li>Check null density and outlier value patterns.</li>
+          <li>Identify mixed types inside columns, especially IDs and numeric fields.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Checklist step 2: normalize structure</h2>
+        <p>
+          Structure issues are easier to fix before semantic rules. Clean column headers, delimiter assumptions, and
+          whitespace to stabilize all later logic.
+        </p>
+        <ol>
+          <li>Standardize header case and spacing.</li>
+          <li>Decode quoted fields correctly and enforce safe escaping.</li>
+          <li>Normalize line endings and drop trailing separators from blank fields.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Checklist step 3: value rules</h2>
+        <p>
+          Then apply value-level rules in a controlled order. This avoids accidental data loss and makes failures easier to
+          explain.
+        </p>
+        <ul>
+          <li>Trim leading and trailing whitespace.</li>
+          <li>Standardize text case for key columns used in joins.</li>
+          <li>Normalize dates and numbers using an approved format.</li>
+          <li>Resolve duplicates with deterministic sorting logic.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Checklist step 4: validation and audit</h2>
+        <p>
+          A cleanup run should end with a short verification pass and a small change record.
+        </p>
+        <ul>
+          <li>Validate row-level counts against source expectations.</li>
+          <li>Validate schema after cleaning and before export.</li>
+          <li>Run a sample spot-check of the output in a browser preview tool.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>When to skip a rule</h2>
+        <p>
+          Not every rule applies to every file. Keep a decision line for each optional step so the process remains transparent.
+        </p>
+        <p>
+          For example, heavy deduplication is unnecessary on transactional logs where records are designed to repeat.
+          In that case, flag duplicates separately instead of removing them.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

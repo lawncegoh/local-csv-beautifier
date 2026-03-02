@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}      
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV schema validation before analysis | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Build CSV schema validation checks for headers, field types, and business constraints before loading data into dashboards or scripts."
+    />
+    <meta
+      name="keywords"
+      content="csv schema validation, csv data types, required columns, csv quality checks, data contracts"
+    />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-csv-schema-validation.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">← Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>CSV schema validation as a first-class task</h1>
+        <p>
+          Schema checks stop bad data early and reduce manual triage. Instead of cleaning after imports, validate format,
+          types, and constraints as soon as the file arrives.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Define schema rules as code</h2>
+        <p>
+          A schema contract should say which columns must exist, their expected types, and what constitutes an invalid value.
+          If possible, store this in a shared configuration file and version control it.
+        </p>
+        <ul>
+          <li>Required columns list</li>
+          <li>Type constraints per column</li>
+          <li>Allowed value ranges and enumerations</li>
+          <li>Null allowances by field</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Header-level checks</h2>
+        <p>
+          Header mismatches are the fastest way to corrupt downstream models. Check both spelling and position-sensitive
+          expectations before any row transformations.
+        </p>
+        <ul>
+          <li>Reject unexpected duplicate headers.</li>
+          <li>Normalize case, trim, and remove odd characters.</li>
+          <li>Fail fast when a mandatory header is missing.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Type checks for mixed formats</h2>
+        <p>
+          Mixed numeric and text formats in the same column are common in CSV exports. They should be flagged and corrected
+          with explicit fallback rules.
+        </p>
+        <ul>
+          <li>Type-assert integers and decimals separately.</li>
+          <li>Isolate malformed rows into exceptions.</li>
+          <li>Use canonical transformations and avoid silent coercion.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Business-rule checks</h2>
+        <p>
+          Generic schema rules catch syntax. Business rules catch reality errors: impossible dates, invalid status sequences,
+          and cross-column contradictions.
+        </p>
+        <ul>
+          <li>Validate date ordering and status transitions.</li>
+          <li>Check foreign key reference fields where possible.</li>
+          <li>Flag outlier amounts and negative values in constrained fields.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Keep exceptions visible</h2>
+        <p>
+          A clean pipeline should never silently drop errors. Keep a separated exceptions file with reason codes.
+          This makes QA faster and prevents accidental data loss.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="about.html">About</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
