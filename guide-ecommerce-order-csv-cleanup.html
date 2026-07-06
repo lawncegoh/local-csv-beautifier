@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce order CSV cleanup for reporting and import | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Clean ecommerce order CSV exports by standardizing order IDs, dates, totals, customer fields, fulfillment status, and duplicate rows."
+    />
+    <meta name="keywords" content="ecommerce csv cleanup, order export csv, clean Shopify csv, order data quality" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Local CSV Beautifier" />
+    <meta property="og:title" content="Ecommerce order CSV cleanup for reporting and import" />
+    <meta property="og:description" content="Prepare order CSV exports for analysis, warehouse imports, and financial reporting." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://csvcleanersecure.org/guide-ecommerce-order-csv-cleanup.html" />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-ecommerce-order-csv-cleanup.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>Ecommerce order CSV cleanup for reporting and import</h1>
+        <p>
+          Order exports drive fulfillment, refunds, revenue reporting, and inventory reconciliation. A small formatting
+          issue in order totals or dates can create mismatches across several tools.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Protect order identifiers</h2>
+        <p>
+          Order IDs, SKUs, tracking numbers, and payment references should be treated as text even when they look numeric.
+          They may contain leading zeros, prefixes, or marketplace-specific separators.
+        </p>
+        <ul>
+          <li>Check that order_id remains unique after cleanup.</li>
+          <li>Do not remove leading zeros from SKUs or tracking references.</li>
+          <li>Keep line-item identifiers if one order can contain multiple rows.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Normalize dates and totals</h2>
+        <p>
+          Ecommerce systems can export regional date formats and totals with thousands separators. Normalize order dates
+          to ISO format and remove number separators only after confirming the column is truly numeric.
+        </p>
+        <ul>
+          <li>Convert order_date, paid_at, shipped_at, and refunded_at consistently.</li>
+          <li>Keep currency code in a separate column when possible.</li>
+          <li>Compare total revenue before and after cleaning to catch accidental parsing changes.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Clean fulfillment status</h2>
+        <p>
+          Status fields often arrive with mixed labels such as Shipped, shipped, fulfilled, and complete. Map them before
+          dashboarding so open orders and completed orders are not split across duplicate categories.
+        </p>
+        <ul>
+          <li>Use a fixed status list for pending, paid, fulfilled, cancelled, refunded, and returned.</li>
+          <li>Keep blank status values for manual review.</li>
+          <li>Export a small sample and verify it in the warehouse or reporting tool first.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Recommended local workflow</h2>
+        <ol>
+          <li>Load the order export sample on the main page or paste your own export.</li>
+          <li>Use delimiter auto-detection when the source comes from a regional spreadsheet.</li>
+          <li>Enable header normalization, duplicate removal, and date/number cleanup.</li>
+          <li>Download the change log and compare row count, order count, and total revenue.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="index.html">Tool</a>
+      <a class="footer-tab" href="resources.html">Guides</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

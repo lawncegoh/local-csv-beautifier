@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey CSV cleaning for ratings, comments, and segments | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Clean survey CSV exports by preserving comments, normalizing ratings, fixing dates, removing duplicate rows, and preparing segments for analysis."
+    />
+    <meta name="keywords" content="survey csv cleaning, clean survey export, rating csv cleanup, survey data quality" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Local CSV Beautifier" />
+    <meta property="og:title" content="Survey CSV cleaning for ratings, comments, and segments" />
+    <meta property="og:description" content="Prepare survey exports for analysis without damaging open-text responses." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://csvcleanersecure.org/guide-survey-csv-cleaning.html" />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-survey-csv-cleaning.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>Survey CSV cleaning for ratings, comments, and segments</h1>
+        <p>
+          Survey exports mix structured values such as rating and segment with open-text comments. Clean the structured
+          fields without damaging the language respondents entered.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Protect open-text answers</h2>
+        <p>
+          Comments often contain commas, line breaks, quotes, and extra spaces. Those values should remain readable and
+          correctly quoted after cleanup.
+        </p>
+        <ul>
+          <li>Preview comments after delimiter conversion to confirm columns did not shift.</li>
+          <li>Do not strip punctuation from response text unless a downstream system requires it.</li>
+          <li>Keep respondent IDs separate from comment text for traceability.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Normalize ratings and segments</h2>
+        <p>
+          Rating fields should be numeric or blank. Segment fields should use one consistent label per group, otherwise
+          charts will split the same audience into multiple categories.
+        </p>
+        <ul>
+          <li>Turn null-like rating values into blanks before calculating averages.</li>
+          <li>Normalize segment capitalization and whitespace.</li>
+          <li>Keep a list of invalid ratings for manual review instead of forcing them into a number.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Handle duplicate submissions</h2>
+        <p>
+          Duplicate rows can be caused by exports, retries, or respondents submitting twice. Decide whether the correct
+          key is respondent_id, email, session_id, or a combination of respondent and submitted_at.
+        </p>
+        <ul>
+          <li>Remove exact duplicate rows when they are clearly export artifacts.</li>
+          <li>Review non-exact duplicates because later submissions may be intentional corrections.</li>
+          <li>Store a copy of removed duplicates with the cleaned survey file.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Recommended local workflow</h2>
+        <ol>
+          <li>Load the survey sample on the tool page or paste a survey export.</li>
+          <li>Keep quote handling, header normalization, null cleanup, and duplicate removal enabled.</li>
+          <li>Inspect changed cells in comment, rating, segment, and submitted_at columns.</li>
+          <li>Download the cleaned CSV and run a row-count check before analysis.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="index.html">Tool</a>
+      <a class="footer-tab" href="resources.html">Guides</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

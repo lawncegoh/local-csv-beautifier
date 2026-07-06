@@ -3,109 +3,133 @@
   <url>
     <loc>https://csvcleanersecure.org/</loc>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-02-25</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-07-06</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>/about.html</loc>
+    <loc>https://csvcleanersecure.org/resources.html</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/about.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/compliance.html</loc>
+    <changefreq>yearly</changefreq>
+    <lastmod>2026-07-06</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>/resources.html</loc>
+    <loc>https://csvcleanersecure.org/guide-large-datasets.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-large-datasets.html</loc>
+    <loc>https://csvcleanersecure.org/guide-excel-csv.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-excel-csv.html</loc>
+    <loc>https://csvcleanersecure.org/guide-python-csv.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-python-csv.html</loc>
+    <loc>https://csvcleanersecure.org/guide-delimiter-to-comma.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-delimiter-to-comma.html</loc>
+    <loc>https://csvcleanersecure.org/guide-format-csv-for-excel.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-format-csv-for-excel.html</loc>
+    <loc>https://csvcleanersecure.org/guide-remove-null-rows.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-remove-null-rows.html</loc>
+    <loc>https://csvcleanersecure.org/guide-data-cleansing.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-data-cleansing.html</loc>
+    <loc>https://csvcleanersecure.org/guide-data-formats-comparison.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-data-formats-comparison.html</loc>
+    <loc>https://csvcleanersecure.org/guide-csv-in-hft-backtesting.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/guide-csv-in-hft-backtesting.html</loc>
+    <loc>https://csvcleanersecure.org/guide-csv-data-cleaning-checklist.html</loc>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/compliance.html</loc>
-    <changefreq>yearly</changefreq>
-    <lastmod>2026-02-25</lastmod>
-    <priority>0.3</priority>
+    <loc>https://csvcleanersecure.org/guide-excel-csv-import-pitfalls.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/guide-csv-schema-validation.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/guide-csv-date-number-cleaning.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/guide-python-csv-automation-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/guide-crm-export-cleanup.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/guide-ecommerce-order-csv-cleanup.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/guide-bank-transaction-csv-reconciliation.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://csvcleanersecure.org/guide-survey-csv-cleaning.html</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-06</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
-  <url>
-    <loc>/guide-csv-data-cleaning-checklist.html</loc>
-    <changefreq>monthly</changefreq>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>/guide-excel-csv-import-pitfalls.html</loc>
-    <changefreq>monthly</changefreq>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>/guide-csv-schema-validation.html</loc>
-    <changefreq>monthly</changefreq>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>/guide-csv-date-number-cleaning.html</loc>
-    <changefreq>monthly</changefreq>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>/guide-python-csv-automation-guide.html</loc>
-    <changefreq>monthly</changefreq>
-    <lastmod>2026-03-02</lastmod>
-    <priority>0.7</priority>
-  </url>
