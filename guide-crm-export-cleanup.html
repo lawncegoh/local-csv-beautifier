@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean CRM contact CSV exports before import | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="A practical CRM CSV cleanup workflow for contacts, companies, email lists, lead status, duplicate rows, dates, and import-ready headers."
+    />
+    <meta name="keywords" content="crm csv cleanup, contact export csv, clean email list csv, crm import data quality" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Local CSV Beautifier" />
+    <meta property="og:title" content="Clean CRM contact CSV exports before import" />
+    <meta property="og:description" content="Prepare CRM contact exports with header, email, status, date, and duplicate checks." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://csvcleanersecure.org/guide-crm-export-cleanup.html" />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-crm-export-cleanup.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>Clean CRM contact CSV exports before import</h1>
+        <p>
+          CRM exports often look simple until they are merged into a mailing list, sales sequence, or analytics table.
+          Clean the file first so duplicates, blank records, and inconsistent field names do not spread downstream.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Start with a contact schema</h2>
+        <p>
+          Decide which fields are required before editing values. A typical contact import should have stable headers
+          such as contact_id, full_name, email, company, lifecycle_stage, owner, created_at, and updated_at.
+        </p>
+        <ul>
+          <li>Normalize headers to one style before mapping fields in the destination system.</li>
+          <li>Keep source identifiers whenever they exist; they make future merges safer.</li>
+          <li>Do not infer missing emails or names. Leave uncertain values blank and review them separately.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Deduplicate with a clear key</h2>
+        <p>
+          For CRM data, a duplicate row is not always a duplicate contact. Two records can share a company name but
+          represent different people. Use email or source contact ID as the primary key when available.
+        </p>
+        <ul>
+          <li>Trim and lowercase emails before duplicate checks in your CRM or spreadsheet.</li>
+          <li>Review contacts with missing email addresses instead of deleting them automatically.</li>
+          <li>Keep one export of removed duplicates for audit and rollback.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Clean status and owner fields</h2>
+        <p>
+          Lead status, lifecycle stage, owner, and region fields are usually used for routing. Normalize spelling and
+          empty values before import so reports do not split the same group across multiple labels.
+        </p>
+        <ul>
+          <li>Map values such as Active, active, and ACTIVE into one canonical value.</li>
+          <li>Turn placeholders such as N/A, null, none, and -- into blank values.</li>
+          <li>Validate owner names against a current user list before uploading.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Use the local cleaner</h2>
+        <ol>
+          <li>Paste a CRM export or load the CRM sample on the main tool page.</li>
+          <li>Keep trim whitespace, normalize nulls, unique headers, and duplicate removal enabled.</li>
+          <li>Run cleanup and inspect changed cells in the preview.</li>
+          <li>Download the cleaned CSV and change log before importing into the CRM.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="index.html">Tool</a>
+      <a class="footer-tab" href="resources.html">Guides</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

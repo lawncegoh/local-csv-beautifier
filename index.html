@@ -12,10 +12,10 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Local CSV Beautifier - Clean CSVs in Your Browser</title>
+    <title>Local CSV Beautifier - Private CSV Cleaner, Formatter, and Validator</title>
     <meta
       name="description"
-      content="Browser-only CSV cleaner: trim, dedupe, normalize nulls, and format dates/numbers for clean exports you can trust."
+      content="Clean CSV files locally in your browser. Format headers, remove duplicates, fix null values, normalize dates and numbers, preview changes, and download an audit log."
     />
     <meta name="keywords" content="CSV cleaner, local CSV tool, offline CSV editor, dedupe CSV, CSV formatter, data cleanup" />
     <meta name="robots" content="index, follow" />
@@ -24,11 +24,11 @@
     <meta property="og:site_name" content="Local CSV Beautifier" />
     <meta
       property="og:title"
-      content="Local CSV Beautifier - Clean CSVs in Your Browser"
+      content="Local CSV Beautifier - Private CSV Cleaner, Formatter, and Validator"
     />
     <meta
       property="og:description"
-      content="Browser-only CSV cleaner for fast cleanup: trim, dedupe, normalize nulls, and format dates/numbers before export."
+      content="Clean CSV files locally with previews, profiles, change logs, date and number normalization, duplicate removal, and Excel-ready exports."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://csvcleanersecure.org/" />
@@ -39,11 +39,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Local CSV Beautifier - Clean CSVs in Your Browser"
+      content="Local CSV Beautifier - Private CSV Cleaner, Formatter, and Validator"
     />
     <meta
       name="twitter:description"
-      content="Clean CSV files in-browser: trim, dedupe, normalize nulls, and fix formatting with previewed, downloadable results."
+      content="Private browser-based CSV cleanup with previewed changes, reusable profiles, and downloadable audit logs."
     />
     <link rel="canonical" href="https://csvcleanersecure.org/" />
     <link rel="stylesheet" href="styles.css" />
@@ -80,19 +80,33 @@
   <body>
     <main class="page">
       <header class="hero">
+        <nav class="top-nav" aria-label="Primary">
+          <a href="resources.html">Guides</a>
+          <a href="about.html">About</a>
+          <a href="compliance.html">Privacy</a>
+        </nav>
         <h1>Local CSV Beautifier</h1>
         <div class="actions">
-          <a class="btn ghost" href="about.html">About this project</a>
+          <a class="btn ghost" href="resources.html">CSV guides</a>
         </div>
-        <p>Upload or paste a CSV, clean it, review the diff, and download the result. Nothing is sent to a server.</p>
+        <p>
+          Clean messy CSV files in your browser, review exactly what changed, and download a safer import-ready file.
+          Your CSV contents stay on your device.
+        </p>
+        <div class="trust-strip" aria-label="Tool capabilities">
+          <span>Local processing</span>
+          <span>Change log export</span>
+          <span>Saved cleanup profiles</span>
+          <span>Excel-friendly output</span>
+        </div>
       </header>
       <section class="app-shell">
         <aside class="sidebar">
           <section class="card">
             <h2>Why use this local CSV cleaner</h2>
             <p>
-              If your spreadsheets feel messy, use this before importing into BI,
-              dashboards, or reporting tools.
+              Use this before importing vendor exports, CRM lists, bank statements, survey results, or ecommerce orders
+              into BI tools, spreadsheets, scripts, and reconciliation workflows.
             </p>
             <div class="actions">
               <a class="btn btn-guide" href="resources.html">Data cleaning guides</a>
@@ -113,6 +127,16 @@
             </p>
           </section>
 
+          <section class="card">
+            <h2>Workflow articles</h2>
+            <ul class="link-list">
+              <li><a href="guide-crm-export-cleanup.html">Clean CRM contact exports</a></li>
+              <li><a href="guide-ecommerce-order-csv-cleanup.html">Prepare ecommerce order CSV files</a></li>
+              <li><a href="guide-bank-transaction-csv-reconciliation.html">Normalize bank transaction CSV files</a></li>
+              <li><a href="guide-survey-csv-cleaning.html">Clean survey CSV results</a></li>
+            </ul>
+          </section>
+
           <section class="card faq">
             <h2>FAQ</h2>
             <details>
@@ -129,25 +153,20 @@
             </details>
           </section>
 
-          <section id="ad-support" class="card ad-unit">
-            <h2>Support this tool</h2>
-            <p class="muted">Ad units render only when AdSense is active for your approved site.</p>
-            <div class="ad-grid">
-              <ins
-                class="adsbygoogle"
-                style="display: block; min-height: 120px"
-                data-ad-client="ca-pub-2686848292627739"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
-            </div>
-          </section>
         </aside>
 
         <div class="content-area">
           <section class="card card-feature">
             <h2>1) Add source</h2>
+            <div class="sample-panel" aria-label="Load a sample CSV">
+              <p class="sample-title">Try a realistic sample</p>
+              <div class="sample-actions">
+                <button class="btn ghost" type="button" data-sample="crm">CRM contacts</button>
+                <button class="btn ghost" type="button" data-sample="orders">Order exports</button>
+                <button class="btn ghost" type="button" data-sample="bank">Bank transactions</button>
+                <button class="btn ghost" type="button" data-sample="survey">Survey results</button>
+              </div>
+            </div>
             <div class="input-grid">
               <div class="field">
                 <label for="csvFile">Upload CSV</label>
@@ -243,20 +262,10 @@
     </template>
 
     <script src="app.js"></script>
-    <script>
-      window.addEventListener("load", () => {
-        try {
-          document
-            .querySelectorAll("ins.adsbygoogle")
-            .forEach(() => (window.adsbygoogle = window.adsbygoogle || []).push({}));
-        } catch {
-          // Ads are optional until AdSense is enabled.
-        }
-      });
-    </script>
     <footer class="site-footer">
       <div class="footer-links">
       <a class="footer-tab" href="about.html">About</a>
+      <a class="footer-tab" href="resources.html">Guides</a>
       <a class="footer-tab" href="compliance.html">Compliance</a>
       </div>
       <p class="footer-note">Privacy, ad transparency, and local-processing disclosures are available in Compliance.</p>

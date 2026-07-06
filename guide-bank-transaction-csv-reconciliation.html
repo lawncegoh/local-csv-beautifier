@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQD4Y1WSSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VQD4Y1WSSS');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank transaction CSV cleanup for reconciliation | Local CSV Beautifier</title>
+    <meta
+      name="description"
+      content="Prepare bank transaction CSV files for reconciliation by cleaning dates, amounts, descriptions, categories, references, and duplicate rows."
+    />
+    <meta name="keywords" content="bank csv reconciliation, transaction csv cleanup, clean bank export, finance csv cleaner" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Local CSV Beautifier" />
+    <meta property="og:title" content="Bank transaction CSV cleanup for reconciliation" />
+    <meta property="og:description" content="Clean transaction exports before matching them against accounting or finance records." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://csvcleanersecure.org/guide-bank-transaction-csv-reconciliation.html" />
+    <link rel="canonical" href="https://csvcleanersecure.org/guide-bank-transaction-csv-reconciliation.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="resource-back-wrap">
+        <a class="btn ghost" href="resources.html">Back to guides</a>
+      </div>
+      <header class="hero">
+        <h1>Bank transaction CSV cleanup for reconciliation</h1>
+        <p>
+          Bank exports need careful handling because the cleaned file may support cash reconciliation, expense review,
+          tax preparation, or accounting imports. Keep the workflow conservative and auditable.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Separate amount from meaning</h2>
+        <p>
+          A transaction amount should stay numeric, while description, merchant, account, and reference values should
+          remain text. This prevents accidental changes to identifiers that look like numbers.
+        </p>
+        <ul>
+          <li>Normalize amount separators only in amount columns.</li>
+          <li>Keep debit and credit sign conventions consistent across the file.</li>
+          <li>Do not remove rows with zero amounts until you know how the bank exports reversals or holds.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Standardize transaction dates</h2>
+        <p>
+          Banks may export posting date, transaction date, and value date separately. Keep them separate and convert each
+          date column to the same ISO format so sorting and matching are predictable.
+        </p>
+        <ul>
+          <li>Use YYYY-MM-DD for matching against ledgers and accounting tools.</li>
+          <li>Check ambiguous dates manually when both day and month are 12 or less.</li>
+          <li>Preserve timezone or timestamp fields if the bank provides them.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Preserve the audit trail</h2>
+        <p>
+          Reconciliation workflows need explainability. Download the change log from the cleaner and store it beside the
+          cleaned CSV so reviewers can see which values were normalized.
+        </p>
+        <ul>
+          <li>Compare original and cleaned row counts before importing.</li>
+          <li>Keep duplicate removal disabled if the bank intentionally exports reversal pairs.</li>
+          <li>Use reference numbers, dates, and amounts together when matching transactions.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Recommended local workflow</h2>
+        <ol>
+          <li>Load the bank transaction sample or paste a redacted bank export.</li>
+          <li>Enable whitespace cleanup, null normalization, and date/number normalization.</li>
+          <li>Review highlighted changed cells before downloading.</li>
+          <li>Import a small sample into your accounting tool before processing the full file.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-tab" href="index.html">Tool</a>
+      <a class="footer-tab" href="resources.html">Guides</a>
+      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

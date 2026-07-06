@@ -15,6 +15,40 @@ const DEFAULT_OPTIONS = {
 };
 
 const PROFILE_KEY = "local-csv-beautifier-profiles-v1";
+const SAMPLE_DATASETS = {
+  crm: {
+    label: "CRM contacts",
+    text: ` Full Name , Email Address , Company , Signup Date , Lead Score , Status
+ "Alicia Tan" , ALICIA@example.com , Northstar Pte Ltd , 1/5/26 , "1,240" , active
+ "Ben Ong" , ben@example.com , Northstar Pte Ltd , 2026-01-08 , null , Active
+ "Alicia Tan" , ALICIA@example.com , Northstar Pte Ltd , 1/5/26 , "1,240" , active
+ -- , n/a , , , ,`
+  },
+  orders: {
+    label: "Order exports",
+    text: ` Order ID ; Customer ; Order Date ; Total ; Fulfillment Status
+ 10001 ; "Mira Lee" ; 02/14/2026 ; "1,399.00" ; shipped
+ 10002 ; "Ravi Kumar" ; 2026-02-15 ; 89.50 ; pending
+ 10003 ; "Mira Lee" ; 2-16-26 ; N/A ; pending
+ 10003 ; "Mira Lee" ; 2-16-26 ; N/A ; pending`
+  },
+  bank: {
+    label: "Bank transactions",
+    text: `Txn Date, Description , Amount , Category , Reference
+01/02/2026, " CARD PAYMENT  SHOP  " , "-1,240.70" , expenses , abc-001
+2026-01-03, "Salary" , "8,500.00" , income , abc-002
+01/04/26, null , 0 , n/a , --
+01/02/2026, " CARD PAYMENT  SHOP  " , "-1,240.70" , expenses , abc-001`
+  },
+  survey: {
+    label: "Survey results",
+    text: ` Respondent ID , Submitted At , Rating , Comment , Segment
+ r-1 , 3/1/26 , 5 , "Loved   the export speed" , SMB
+ r-2 , 2026-03-02 , N/A , "null" , Enterprise
+ r-3 , 03-03-2026 , 4 , "Needs better Excel defaults" , SMB
+ r-3 , 03-03-2026 , 4 , "Needs better Excel defaults" , SMB`
+  },
+};
 
 let latestOutput = "";
 let latestLog = {};
@@ -49,6 +83,8 @@ const els = {
   profileSelect: $("profileSelect"),
   deleteProfileBtn: $("deleteProfileBtn"),
 };
+
+const sampleButtons = Array.from(document.querySelectorAll("[data-sample]"));
 
 const escapeHtml = (value) =>
   String(value ?? "")
@@ -722,6 +758,21 @@ function clearForm() {
   latestLog = {};
 }
 
+function loadSample(sampleKey) {
+  const sample = SAMPLE_DATASETS[sampleKey];
+  if (!sample) return;
+  els.file.value = "";
+  els.fileName.textContent = `Using sample: ${sample.label}`;
+  els.text.value = sample.text.trim();
+  setUiFromOptions(DEFAULT_OPTIONS);
+  setStatus(`Loaded ${sample.label} sample. Run cleanup to inspect the changes.`);
+  els.previewOriginal.innerHTML = "";
+  els.previewCleaned.innerHTML = "";
+  els.report.innerHTML = "";
+  els.downloadCsvBtn.disabled = true;
+  els.downloadLogBtn.disabled = true;
+}
+
 els.file.addEventListener("change", () => {
   els.fileName.textContent = els.file.files[0]?.name || "No file chosen";
   if (els.file.files[0]) {
@@ -747,6 +798,9 @@ els.text.addEventListener("input", () => {
     els.file.value = "";
     els.fileName.textContent = "No file chosen (using pasted text)";
   }
+});
+sampleButtons.forEach((button) => {
+  button.addEventListener("click", () => loadSample(button.dataset.sample));
 });
 
 refreshProfileList();
