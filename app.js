@@ -48,6 +48,22 @@ const SAMPLE_DATASETS = {
  r-3 , 03-03-2026 , 4 , "Needs better Excel defaults" , SMB
  r-3 , 03-03-2026 , 4 , "Needs better Excel defaults" , SMB`
   },
+  excel: {
+    label: "Excel import",
+    text: `Customer Name;Invoice Date;Invoice Total;Region;Notes
+ "Acme Pte Ltd" ; 07/01/26 ; "2,450.00" ; APAC ; "Imported  from Excel"
+ "Blue Finch" ; 2026-07-02 ; "1,005.50" ; EMEA ; N/A
+ "Blue Finch" ; 2026-07-02 ; "1,005.50" ; EMEA ; N/A
+ ; ; NULL ; -- ;`
+  },
+  schema: {
+    label: "Schema check",
+    text: ` User ID , User ID , Created At , Plan , Monthly Spend
+ 001 , 001 , 6/30/26 , Pro , "129.00"
+ 002 , 002 , 2026-07-01 , Team , "2,499.00"
+ 003 , 003 , not available , Free , 0
+ 003 , 003 , not available , Free , 0`
+  },
 };
 
 let latestOutput = "";

@@ -16,17 +16,32 @@
       name="description"
       content="Fix date and number format issues from CSV and Excel workflows: decimal separators, thousands markers, date serials, and stable numeric parsing."
     />
-    <meta
-      name="keywords"
-      content="csv date format, clean numbers in csv, decimal separator csv, excel date serial, csv currency cleanup"
-    />
     <link rel="canonical" href="https://csvcleanersecure.org/guide-csv-date-number-cleaning.html" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "CSV date and number cleaning for reliable reports | Local CSV Beautifier",
+          "description": "Fix date and number format issues from CSV and Excel workflows: decimal separators, thousands markers, date serials, and stable numeric parsing.",
+          "url": "https://csvcleanersecure.org/guide-csv-date-number-cleaning.html",
+          "datePublished": "2026-07-21",
+          "dateModified": "2026-07-21",
+          "author": {
+                "@type": "Person",
+                "name": "Lawnce Goh"
+          },
+          "publisher": {
+                "@type": "Organization",
+                "name": "Local CSV Beautifier"
+          },
+          "isPartOf": {
+                "@type": "WebSite",
+                "name": "Local CSV Beautifier",
+                "url": "https://csvcleanersecure.org/"
+          }
+    }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -92,10 +107,29 @@
           <li>Block files with unresolved numeric tokens.</li>
         </ul>
       </section>
+
+      <section class="card">
+        <h2>When not to normalize automatically</h2>
+        <p>
+          Some fields look like dates or numbers but are identifiers. Before applying broad cleanup, classify columns by
+          purpose. A transaction reference, SKU, account number, or survey respondent ID should usually remain text.
+        </p>
+        <ul>
+          <li><strong>Ambiguous dates:</strong> pause when both day and month are 12 or less and the source locale is unknown.</li>
+          <li><strong>Large integers:</strong> preserve as text when precision or leading zeros matter.</li>
+          <li><strong>Currency:</strong> keep currency code separate from the amount when multiple currencies appear.</li>
+          <li><strong>Audit:</strong> compare source and cleaned samples before downloading the final CSV.</li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="about.html">About</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="resources.html">Guides</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

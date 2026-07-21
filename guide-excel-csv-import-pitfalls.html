@@ -16,17 +16,32 @@
       name="description"
       content="Stop common Excel to CSV import failures. Learn how separator, locale, quoting, and date settings break imports and how to fix them before sharing files."
     />
-    <meta
-      name="keywords"
-      content="excel to csv import, csv excel delimiter, excel export commas semicolon, malformed csv excel"
-    />
     <link rel="canonical" href="https://csvcleanersecure.org/guide-excel-csv-import-pitfalls.html" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Excel to CSV import pitfalls and fixes | Local CSV Beautifier",
+          "description": "Stop common Excel to CSV import failures. Learn how separator, locale, quoting, and date settings break imports and how to fix them before sharing files.",
+          "url": "https://csvcleanersecure.org/guide-excel-csv-import-pitfalls.html",
+          "datePublished": "2026-07-21",
+          "dateModified": "2026-07-21",
+          "author": {
+                "@type": "Person",
+                "name": "Lawnce Goh"
+          },
+          "publisher": {
+                "@type": "Organization",
+                "name": "Local CSV Beautifier"
+          },
+          "isPartOf": {
+                "@type": "WebSite",
+                "name": "Local CSV Beautifier",
+                "url": "https://csvcleanersecure.org/"
+          }
+    }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -102,10 +117,30 @@
           <li>Run null and schema checks before sharing with downstream systems.</li>
         </ol>
       </section>
+
+      <section class="card">
+        <h2>Excel-safe review checklist</h2>
+        <p>
+          Before sending an Excel-derived CSV to another tool, open a cleaned preview and inspect the columns Excel tends
+          to reinterpret. The safest workflow is to preserve identifiers as text and normalize only the fields intended
+          for calculation.
+        </p>
+        <ul>
+          <li><strong>IDs:</strong> account numbers, invoice numbers, postal codes, and SKUs should keep leading zeros.</li>
+          <li><strong>Dates:</strong> ambiguous values such as 03/04/2026 should be resolved before conversion.</li>
+          <li><strong>Quotes:</strong> comments containing commas should remain in a single column after export.</li>
+          <li><strong>Totals:</strong> compare sum totals before and after cleanup when using numeric fields.</li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="about.html">About</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="resources.html">Guides</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

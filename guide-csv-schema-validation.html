@@ -16,17 +16,32 @@
       name="description"
       content="Build CSV schema validation checks for headers, field types, and business constraints before loading data into dashboards or scripts."
     />
-    <meta
-      name="keywords"
-      content="csv schema validation, csv data types, required columns, csv quality checks, data contracts"
-    />
     <link rel="canonical" href="https://csvcleanersecure.org/guide-csv-schema-validation.html" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "CSV schema validation before analysis | Local CSV Beautifier",
+          "description": "Build CSV schema validation checks for headers, field types, and business constraints before loading data into dashboards or scripts.",
+          "url": "https://csvcleanersecure.org/guide-csv-schema-validation.html",
+          "datePublished": "2026-07-21",
+          "dateModified": "2026-07-21",
+          "author": {
+                "@type": "Person",
+                "name": "Lawnce Goh"
+          },
+          "publisher": {
+                "@type": "Organization",
+                "name": "Local CSV Beautifier"
+          },
+          "isPartOf": {
+                "@type": "WebSite",
+                "name": "Local CSV Beautifier",
+                "url": "https://csvcleanersecure.org/"
+          }
+    }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -101,10 +116,30 @@
           This makes QA faster and prevents accidental data loss.
         </p>
       </section>
+
+      <section class="card">
+        <h2>Example schema contract</h2>
+        <p>
+          A practical contract can be small. For a customer export, require customer_id, email, created_at, status, and
+          region. Then state that customer_id and email are text, created_at must be an ISO date, status must be from an
+          approved list, and region may be blank only for legacy rows.
+        </p>
+        <ul>
+          <li><strong>Required:</strong> fail the file when a required column is missing.</li>
+          <li><strong>Duplicate headers:</strong> block or rename duplicates before any row-level cleanup.</li>
+          <li><strong>Type exceptions:</strong> keep rejected rows with reason codes for manual repair.</li>
+          <li><strong>Local QA:</strong> load a sample into the browser cleaner to preview header and value changes.</li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="about.html">About</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="resources.html">Guides</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

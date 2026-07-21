@@ -15,7 +15,6 @@
       name="description"
       content="A practical CRM CSV cleanup workflow for contacts, companies, email lists, lead status, duplicate rows, dates, and import-ready headers."
     />
-    <meta name="keywords" content="crm csv cleanup, contact export csv, clean email list csv, crm import data quality" />
     <meta name="robots" content="index, follow" />
     <meta property="og:site_name" content="Local CSV Beautifier" />
     <meta property="og:title" content="Clean CRM contact CSV exports before import" />
@@ -24,11 +23,30 @@
     <meta property="og:url" content="https://csvcleanersecure.org/guide-crm-export-cleanup.html" />
     <link rel="canonical" href="https://csvcleanersecure.org/guide-crm-export-cleanup.html" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Clean CRM contact CSV exports before import | Local CSV Beautifier",
+          "description": "A practical CRM CSV cleanup workflow for contacts, companies, email lists, lead status, duplicate rows, dates, and import-ready headers.",
+          "url": "https://csvcleanersecure.org/guide-crm-export-cleanup.html",
+          "datePublished": "2026-07-21",
+          "dateModified": "2026-07-21",
+          "author": {
+                "@type": "Person",
+                "name": "Lawnce Goh"
+          },
+          "publisher": {
+                "@type": "Organization",
+                "name": "Local CSV Beautifier"
+          },
+          "isPartOf": {
+                "@type": "WebSite",
+                "name": "Local CSV Beautifier",
+                "url": "https://csvcleanersecure.org/"
+          }
+    }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -91,11 +109,30 @@
           <li>Download the cleaned CSV and change log before importing into the CRM.</li>
         </ol>
       </section>
+
+      <section class="card">
+        <h2>Example review notes</h2>
+        <p>
+          A useful CRM cleanup log should say more than "deduped rows." Record which rule made a row safe to import.
+          For example, "Alicia Tan" duplicated by the same email is an exact duplicate, while two rows at the same company
+          with different emails should remain separate contacts.
+        </p>
+        <ul>
+          <li><strong>Email:</strong> trim spaces and review case differences before using email as a dedupe key.</li>
+          <li><strong>Status:</strong> convert labels into a fixed list, but do not invent a lifecycle stage for blank records.</li>
+          <li><strong>Owner:</strong> validate against current CRM users before upload to avoid orphaned leads.</li>
+          <li><strong>Consent:</strong> keep consent, source, and unsubscribe columns intact when preparing campaign lists.</li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="index.html">Tool</a>
-      <a class="footer-tab" href="resources.html">Guides</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="resources.html">Guides</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

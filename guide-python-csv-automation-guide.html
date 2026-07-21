@@ -16,17 +16,32 @@
       name="description"
       content="Design Python CSV automation that standardizes, validates, and exports clean data while keeping manual browser cleanup as a final QA checkpoint."
     />
-    <meta
-      name="keywords"
-      content="python csv automation, data cleaning pipeline, pandas csv cleaning, python data quality checks"
-    />
     <link rel="canonical" href="https://csvcleanersecure.org/guide-python-csv-automation-guide.html" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Python CSV automation guide for cleaner data | Local CSV Beautifier",
+          "description": "Design Python CSV automation that standardizes, validates, and exports clean data while keeping manual browser cleanup as a final QA checkpoint.",
+          "url": "https://csvcleanersecure.org/guide-python-csv-automation-guide.html",
+          "datePublished": "2026-07-21",
+          "dateModified": "2026-07-21",
+          "author": {
+                "@type": "Person",
+                "name": "Lawnce Goh"
+          },
+          "publisher": {
+                "@type": "Organization",
+                "name": "Local CSV Beautifier"
+          },
+          "isPartOf": {
+                "@type": "WebSite",
+                "name": "Local CSV Beautifier",
+                "url": "https://csvcleanersecure.org/"
+          }
+    }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -96,10 +111,29 @@
           This is where column drift, delimiter surprises, and preview issues are easiest to catch.
         </p>
       </section>
+
+      <section class="card">
+        <h2>Script output checklist</h2>
+        <p>
+          A production CSV script should produce more than a cleaned file. Write a concise machine-readable report so a
+          teammate can confirm what changed without reading the full source data.
+        </p>
+        <ul>
+          <li><strong>Counts:</strong> input rows, output rows, empty rows removed, duplicate rows removed.</li>
+          <li><strong>Schema:</strong> missing headers, duplicate headers, unexpected columns, and type exceptions.</li>
+          <li><strong>Transforms:</strong> normalized nulls, date conversions, numeric conversions, and rejected values.</li>
+          <li><strong>Review:</strong> a small sample file for browser preview before sharing downstream.</li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="about.html">About</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="resources.html">Guides</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

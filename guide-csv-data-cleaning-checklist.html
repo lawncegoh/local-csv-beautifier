@@ -16,17 +16,32 @@
       name="description"
       content="Use a practical CSV data cleaning checklist for local-first workflows covering profiling, null handling, dedupe, and post-clean validation."
     />
-    <meta
-      name="keywords"
-      content="csv cleaning checklist, data cleaning workflow, csv quality checks, dedupe csv, remove null rows"
-    />
     <link rel="canonical" href="https://csvcleanersecure.org/guide-csv-data-cleaning-checklist.html" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "CSV data cleaning checklist: build a repeatable process | Local CSV Beautifier",
+          "description": "Use a practical CSV data cleaning checklist for local-first workflows covering profiling, null handling, dedupe, and post-clean validation.",
+          "url": "https://csvcleanersecure.org/guide-csv-data-cleaning-checklist.html",
+          "datePublished": "2026-07-21",
+          "dateModified": "2026-07-21",
+          "author": {
+                "@type": "Person",
+                "name": "Lawnce Goh"
+          },
+          "publisher": {
+                "@type": "Organization",
+                "name": "Local CSV Beautifier"
+          },
+          "isPartOf": {
+                "@type": "WebSite",
+                "name": "Local CSV Beautifier",
+                "url": "https://csvcleanersecure.org/"
+          }
+    }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -116,10 +131,29 @@
           In that case, flag duplicates separately instead of removing them.
         </p>
       </section>
+
+      <section class="card">
+        <h2>Example audit record</h2>
+        <p>
+          Keep a short note beside every cleaned export. A useful record includes the source filename, delimiter, row count,
+          removed empty rows, duplicate policy, date policy, number policy, and the person or script that reviewed the output.
+        </p>
+        <ul>
+          <li><strong>Source:</strong> crm-export-2026-07-21.csv, semicolon delimiter detected.</li>
+          <li><strong>Structure:</strong> headers normalized to snake_case and duplicate headers made unique.</li>
+          <li><strong>Values:</strong> N/A, NULL, none, and -- converted to blank cells.</li>
+          <li><strong>Validation:</strong> row count, key columns, and sample preview checked before download.</li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="about.html">About</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="resources.html">Guides</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

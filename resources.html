@@ -7,59 +7,38 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-VQD4Y1WSSS');
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSV Cleanup and Excel Tutorials | Local CSV Beautifier</title>
+    <title>CSV Cleaning Guides and Workflow Playbooks | Local CSV Beautifier</title>
     <meta
       name="description"
-      content="Practical CSV cleanup tutorials for anyone who wants to clean messy CSV files online, including Excel-specific workflows, large datasets, and reliable formatting for spreadsheet imports."
-    />
-    <meta
-      name="keywords"
-      content="clean messy csv file online, convert semicolon csv to comma, how to remove null rows from csv, format csv for excel, csv cleanup guides, Excel csv formatting"
+      content="Curated CSV cleaning playbooks for Excel imports, schema validation, CRM exports, ecommerce orders, bank reconciliation, surveys, and Python automation."
     />
     <meta name="robots" content="index, follow" />
     <meta property="og:site_name" content="Local CSV Beautifier" />
-    <meta
-      property="og:title"
-      content="CSV Cleanup and Excel Tutorials | Local CSV Beautifier"
-    />
+    <meta property="og:title" content="CSV Cleaning Guides and Workflow Playbooks" />
     <meta
       property="og:description"
-      content="Step-by-step tutorials for CSV cleanup, Excel compatibility, delimiter conversion, and null-row removal."
+      content="Original workflow guides for cleaning real CSV exports before analysis, import, reconciliation, or automation."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://csvcleanersecure.org/resources.html" />
     <link rel="canonical" href="https://csvcleanersecure.org/resources.html" />
     <link rel="stylesheet" href="styles.css" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="CSV Cleanup and Excel Tutorials | Local CSV Beautifier"
-    />
-    <meta
-      name="twitter:description"
-      content="CSV cleanup, Excel formatting, and data prep tutorials for cleaner exports and local-first workflows."
-    />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <meta name="twitter:card" content="summary" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "CSV cleanup and Excel tutorials",
-        "url": "/resources.html",
-        "description": "Hands-on guides for cleaning CSV files online, fixing Excel delimiter and formatting issues, and preparing reliable exports.",
+        "name": "CSV cleaning guides and workflow playbooks",
+        "url": "https://csvcleanersecure.org/resources.html",
+        "description": "Curated workflow guides for cleaning practical CSV exports with Local CSV Beautifier.",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Local CSV Beautifier",
-          "url": "/"
+          "url": "https://csvcleanersecure.org/"
         }
       }
     </script>
@@ -67,306 +46,119 @@
   <body>
     <main class="page">
       <div class="resource-back-wrap">
-        <a class="btn ghost" href="index.html">← Back to tool</a>
+        <a class="btn ghost" href="index.html">Back to tool</a>
       </div>
       <header class="hero">
-        <h1>CSV cleanup and Excel tutorials</h1>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="index.html">Tool</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <h1>CSV cleaning guides and workflow playbooks</h1>
         <p>
-          Practical guides for CSV cleanup and Excel workflows: clean messy CSV files online, fix delimiter issues,
-          remove null rows, and prepare accurate imports from spreadsheets.
+          These guides are focused on real files people need to clean: spreadsheet exports, CRM lists, order reports,
+          bank transactions, survey responses, and recurring Python pipelines. Each guide ends with a local-first
+          workflow you can test in the browser tool.
         </p>
       </header>
 
       <section class="card">
-        <h2>How to use the guide set</h2>
-        <p>
-          Start with one path and apply the same standard every time:
-          source diagnostics, cleaning rules, and a validation pass before export.
-        </p>
-        <ol>
-          <li>
-            Read the relevant guide for your file type, then choose one profile of options.
-          </li>
-          <li>
-            Run on a small sample first and compare row counts and key fields.
-          </li>
-          <li>
-            Process full data only after transformation behavior is stable.
-          </li>
-        </ol>
+        <h2>Start here</h2>
+        <div class="value-grid">
+          <div>
+            <h3>For one-off cleanup</h3>
+            <p>Use the checklist, Excel, date/number, and schema guides before importing a file into a spreadsheet or BI tool.</p>
+          </div>
+          <div>
+            <h3>For business exports</h3>
+            <p>Use the CRM, ecommerce, bank, and survey guides when the CSV comes from a specific workflow with domain-specific risks.</p>
+          </div>
+          <div>
+            <h3>For recurring jobs</h3>
+            <p>Use the Python automation guide to turn the same cleaning rules into repeatable scripts with reviewable output.</p>
+          </div>
+        </div>
       </section>
 
-      <section class="resource-shell">
-        <section class="card">
-          <h2>Latest guides (CSV + Excel focus)</h2>
-          <div class="resource-grid">
-            <article id="clean-large" class="resource-card">
-              <p class="resource-meta">Tutorial • January 2026</p>
-              <h3>How to clean large datasets fast</h3>
-              <p>
-                Large CSV files can be cleaned quickly by reducing transforms to a controlled pipeline:
-                normalize headers, trim whitespace, remove duplicates, and only then apply number/date normalization.
-                This order reduces mistakes and makes each step easier to audit.
-              </p>
-              <p>
-                In-browser cleaning is best for sensitive files because data never leaves the browser by default.
-              </p>
-              <ul>
-                <li>Remove empty rows first and inspect a source sample.</li>
-                <li>Deduplicate only after confirming your header structure.</li>
-                <li>Run one profile per dataset type and save for repeat jobs.</li>
-              </ul>
-              <p>
-                <a href="guide-large-datasets.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
+      <section class="card">
+        <h2>Core guide set</h2>
+        <div class="resource-grid">
+          <article class="resource-card">
+            <p class="resource-meta">Core process</p>
+            <h3>CSV data cleaning checklist</h3>
+            <p>Build a repeatable cleaning sequence: profile the file, normalize structure, clean values, validate output, and keep a change record.</p>
+            <p><a href="guide-csv-data-cleaning-checklist.html" class="resource-link">Read checklist</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">Spreadsheet import</p>
+            <h3>Excel CSV import pitfalls and fixes</h3>
+            <p>Handle semicolon exports, quoted commas, date conversion, leading zero identifiers, and values Excel tries to reinterpret.</p>
+            <p><a href="guide-excel-csv-import-pitfalls.html" class="resource-link">Read Excel guide</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">Validation</p>
+            <h3>CSV schema validation before analysis</h3>
+            <p>Define expected headers, duplicate-header rules, type checks, required fields, and exception handling before loading data.</p>
+            <p><a href="guide-csv-schema-validation.html" class="resource-link">Read schema guide</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">Formatting</p>
+            <h3>CSV date and number cleaning</h3>
+            <p>Standardize date shapes, numeric separators, null values, and ambiguous locale formats before calculating metrics.</p>
+            <p><a href="guide-csv-date-number-cleaning.html" class="resource-link">Read formatting guide</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">CRM workflow</p>
+            <h3>Clean CRM contact exports</h3>
+            <p>Normalize contact fields, lifecycle stages, owner names, blank values, and duplicate contacts before import or campaign use.</p>
+            <p><a href="guide-crm-export-cleanup.html" class="resource-link">Read CRM guide</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">Operations workflow</p>
+            <h3>Prepare ecommerce order CSV files</h3>
+            <p>Protect order IDs and SKUs while cleaning totals, status labels, fulfillment dates, and duplicate rows.</p>
+            <p><a href="guide-ecommerce-order-csv-cleanup.html" class="resource-link">Read order guide</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">Finance workflow</p>
+            <h3>Normalize bank transaction CSV files</h3>
+            <p>Prepare transaction exports for reconciliation with date, amount, reference, and audit-trail checks.</p>
+            <p><a href="guide-bank-transaction-csv-reconciliation.html" class="resource-link">Read finance guide</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">Research workflow</p>
+            <h3>Clean survey CSV results</h3>
+            <p>Preserve open-text answers while cleaning respondent IDs, submitted dates, ratings, segment labels, and duplicates.</p>
+            <p><a href="guide-survey-csv-cleaning.html" class="resource-link">Read survey guide</a></p>
+          </article>
+          <article class="resource-card">
+            <p class="resource-meta">Automation workflow</p>
+            <h3>Python CSV automation</h3>
+            <p>Move from manual cleanup to repeatable scripts with deterministic transforms, logs, validation, and local QA.</p>
+            <p><a href="guide-python-csv-automation-guide.html" class="resource-link">Read automation guide</a></p>
+          </article>
+        </div>
+      </section>
 
-            <article id="excel-tricks" class="resource-card">
-              <p class="resource-meta">Tutorial • January 2026</p>
-              <h3>Excel tricks for CSV cleanup and spreadsheet automation tips</h3>
-              <p>
-                If your team exports from Excel frequently, adopt a cleanup routine before import:
-                consistent delimiter handling, header normalization, and safe null value handling.
-              </p>
-              <p>
-                Use local tools to validate transformations, then re-import the cleaned CSV to avoid manual fixes.
-              </p>
-              <ul>
-                <li>Keep one canonical column naming style (for example, snake_case).</li>
-                <li>Separate cleanup from analytics formatting in your reporting step.</li>
-                <li>Export smaller files while testing, then scale to full-sized exports.</li>
-              </ul>
-              <p>
-                <a href="guide-excel-csv.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-
-            <article id="python-csv" class="resource-card">
-              <p class="resource-meta">Tutorial • January 2026</p>
-              <h3>Python CSV scripts for CSV cleanup workflows</h3>
-              <p>
-                Use Python for repeatable preprocessing when files are large, then use this browser cleaner for ad-hoc
-                checks and quick inspections.
-              </p>
-              <p>A simple pattern is: ingest, standardize fields, dedupe, and write cleaned output with validated logs.</p>
-              <ul>
-                <li>Use pandas for large transformations and explicit schema checks.</li>
-                <li>Keep scripts idempotent so reruns produce the same result.</li>
-                <li>Store transformation steps in version control with change notes.</li>
-              </ul>
-              <p>
-                <a href="guide-python-csv.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-
-            <article id="delimiter-to-comma" class="resource-card">
-              <p class="resource-meta">Tutorial • February 2026</p>
-              <h3>Convert semicolon CSV to comma for Excel</h3>
-              <p>
-                Learn how regional Excel settings can produce semicolon-delimited exports, and how to convert them
-                safely to comma-delimited files without breaking quoted fields.
-              </p>
-              <p>
-                The workflow in this guide covers delimiter detection, separator replacement, and validation using a sample.
-              </p>
-              <ul>
-                <li>Detect whether semicolon is used as a list separator in source files.</li>
-                <li>Preview a few rows after conversion before running full cleanup.</li>
-                <li>Normalize headers and whitespace to prepare for downstream analysis.</li>
-              </ul>
-              <p>
-                <a href="guide-delimiter-to-comma.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-
-            <article id="format-for-excel" class="resource-card">
-              <p class="resource-meta">Tutorial • February 2026</p>
-              <h3>Format CSV for Excel without import errors</h3>
-              <p>
-                If your columns are misaligned in Excel, this guide helps you control quoting, delimiter, text fields,
-                and date shape so your spreadsheet loads predictably.
-              </p>
-              <ul>
-                <li>Use consistent text quoting for values containing commas or new lines.</li>
-                <li>Set one canonical header style before teams import the file.</li>
-                <li>Validate date and number formats using a dry run sample.</li>
-              </ul>
-              <p>
-                <a href="guide-format-csv-for-excel.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-
-            <article id="remove-null-rows" class="resource-card">
-              <p class="resource-meta">Tutorial • February 2026</p>
-              <h3>Remove null rows from CSV at scale</h3>
-              <p>
-                Remove blank and null-like rows in a repeatable way while avoiding accidental deletion of valid sparse rows.
-                This is the core step for clean reporting pipelines.
-              </p>
-              <ul>
-                <li>Define what null means for your process (empty, NA, NULL, N/A).</li>
-                <li>Normalize values before row-level filtering.</li>
-                <li>Export a post-clean sample and compare row counts for auditability.</li>
-              </ul>
-              <p>
-                <a href="guide-remove-null-rows.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-
-            <article id="data-cleansing" class="resource-card">
-              <p class="resource-meta">Tutorial • February 2026</p>
-              <h3>Data cleansing as a strategic layer</h3>
-              <p>
-                A practical guide to moving from one-time cleanup to continuous data quality by profiling, normalizing, validating,
-                and monitoring CSV and spreadsheet exports.
-              </p>
-              <ul>
-                <li>Identify and prioritize common quality defects before reporting or automation.</li>
-                <li>Apply a repeatable sequence for null handling, duplicate resolution, and format drift.</li>
-                <li>Use local-first checks and audits to keep trusted data contracts over time.</li>
-              </ul>
-              <p>
-                <a href="guide-data-cleansing.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-
-            <article id="data-formats" class="resource-card">
-              <p class="resource-meta">Tutorial • February 2026</p>
-              <h3>Parquet vs CSV vs other data formats</h3>
-              <p>
-                Compare common formats and choose the right option based on who uses the data, where it is stored, and
-                the performance goals of your pipeline.
-              </p>
-              <ul>
-                <li>Learn practical differences between CSV, Parquet, JSON, and ORC.</li>
-                <li>Understand tradeoffs in schema, compression, and speed.</li>
-                <li>Apply a simple decision framework for production pipelines and exports.</li>
-              </ul>
-              <p>
-                <a href="guide-data-formats-comparison.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-
-            <article id="data-csv-hft" class="resource-card">
-              <p class="resource-meta">Tutorial • February 2026</p>
-              <h3>CSV in HFT data preparation</h3>
-              <p>
-                Practical patterns for using CSV and CSV-like feeds in high-frequency backtesting, including timestamp
-                handling, event ordering, buffering, and snapshot continuity.
-              </p>
-              <ul>
-                <li>Sort and normalize multiple CSV sources before simulation.</li>
-                <li>Correct latency and event ordering issues as part of ingest.</li>
-                <li>Use larger memory buffers for very large compressed CSV files.</li>
-              </ul>
-              <p>
-                <a href="guide-csv-in-hft-backtesting.html" class="resource-link">Read full guide →</a>
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Workflow guides for real exports</h2>
-          <div class="resource-grid">
-            <article id="guide-crm-export" class="resource-card">
-              <p class="resource-meta">Tutorial • July 2026</p>
-              <h3>Clean CRM contact exports</h3>
-              <p>
-                Normalize names, emails, lead status, and duplicate contacts before importing lists into email, sales,
-                support, or reporting systems.
-              </p>
-              <p><a href="guide-crm-export-cleanup.html" class="resource-link">Read full guide →</a></p>
-            </article>
-            <article id="guide-ecommerce-orders" class="resource-card">
-              <p class="resource-meta">Tutorial • July 2026</p>
-              <h3>Prepare ecommerce order CSV files</h3>
-              <p>
-                Clean order IDs, customer fields, fulfillment status, dates, and totals before analysis or warehouse import.
-              </p>
-              <p><a href="guide-ecommerce-order-csv-cleanup.html" class="resource-link">Read full guide →</a></p>
-            </article>
-            <article id="guide-bank-reconciliation" class="resource-card">
-              <p class="resource-meta">Tutorial • July 2026</p>
-              <h3>Normalize bank transaction CSV files</h3>
-              <p>
-                Prepare transaction exports for reconciliation by standardizing dates, amounts, descriptions, and references.
-              </p>
-              <p><a href="guide-bank-transaction-csv-reconciliation.html" class="resource-link">Read full guide →</a></p>
-            </article>
-            <article id="guide-survey-cleaning" class="resource-card">
-              <p class="resource-meta">Tutorial • July 2026</p>
-              <h3>Clean survey CSV results</h3>
-              <p>
-                Keep ratings, comments, segments, and respondent IDs usable while preserving open-text answers for review.
-              </p>
-              <p><a href="guide-survey-csv-cleaning.html" class="resource-link">Read full guide →</a></p>
-            </article>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>More data cleaning guides</h2>
-          <div class="resource-grid">
-            <article id="guide-checklist" class="resource-card">
-              <p class="resource-meta">Tutorial • March 2026</p>
-              <h3>CSV data cleaning checklist</h3>
-              <p>Build a repeatable cleaning sequence with profiling, structure normalization, value rules, and verification.</p>
-              <p><a href="guide-csv-data-cleaning-checklist.html" class="resource-link">Read full guide →</a></p>
-            </article>
-            <article id="guide-excel-pitfalls" class="resource-card">
-              <p class="resource-meta">Tutorial • March 2026</p>
-              <h3>Excel CSV import pitfalls and fixes</h3>
-              <p>Learn common Excel export issues, from semicolon separators to date and quote edge cases, and apply safe fixes.</p>
-              <p><a href="guide-excel-csv-import-pitfalls.html" class="resource-link">Read full guide →</a></p>
-            </article>
-            <article id="guide-schema-validation" class="resource-card">
-              <p class="resource-meta">Tutorial • March 2026</p>
-              <h3>CSV schema validation before analysis</h3>
-              <p>Set header, type, and constraint checks before import so bad files are blocked early, not after reporting.</p>
-              <p><a href="guide-csv-schema-validation.html" class="resource-link">Read full guide →</a></p>
-            </article>
-            <article id="guide-date-number" class="resource-card">
-              <p class="resource-meta">Tutorial • March 2026</p>
-              <h3>Fix dates and numbers in CSV</h3>
-              <p>Standardize date shapes, numeric separators, and Excel serial values to avoid downstream calculation errors.</p>
-              <p><a href="guide-csv-date-number-cleaning.html" class="resource-link">Read full guide →</a></p>
-            </article>
-            <article id="guide-python-automation" class="resource-card">
-              <p class="resource-meta">Tutorial • March 2026</p>
-              <h3>Python CSV automation for repeatable cleaning</h3>
-              <p>Design deterministic Python CSV scripts and add local QA checks so every run produces predictable output.</p>
-              <p><a href="guide-python-csv-automation-guide.html" class="resource-link">Read full guide →</a></p>
-            </article>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Use cases</h2>
-          <div class="use-cases">
-            <div class="report-card">
-              <strong>Marketing teams:</strong>
-              clean campaign export files before reporting.
-            </div>
-            <div class="report-card">
-              <strong>Finance teams:</strong>
-              normalize dates and numbers before reconciliation.
-            </div>
-            <div class="report-card">
-              <strong>Support teams:</strong>
-              remove null-like values and whitespace noise from customer data.
-            </div>
-            <div class="report-card">
-              <strong>Operations teams:</strong>
-              standardize order and fulfillment exports before handoff.
-            </div>
-          </div>
-        </section>
+      <section class="card">
+        <h2>Editorial standards</h2>
+        <p>
+          We keep the guide set intentionally narrow. Pages are included here only when they explain a distinct workflow,
+          name concrete failure modes, and connect back to a testable cleaning routine in the local tool.
+        </p>
+        <p><a href="methodology.html" class="resource-link">Read our methodology and update policy</a></p>
       </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="about.html">About</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="terms.html">Terms</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

@@ -129,6 +129,34 @@ body {
   font-size: 1.1rem;
 }
 
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.value-card {
+  margin-bottom: 18px;
+}
+
+.value-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.value-grid > div {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 14px;
+}
+
+.value-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .input-grid {
   display: grid;
   gap: 14px;
@@ -290,6 +318,11 @@ textarea {
   margin: 0;
   color: var(--muted);
   font-size: 0.86rem;
+}
+
+.footer-note a {
+  color: #204b8d;
+  font-weight: 700;
 }
 
 .resource-grid {

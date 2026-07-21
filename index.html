@@ -17,7 +17,6 @@
       name="description"
       content="Clean CSV files locally in your browser. Format headers, remove duplicates, fix null values, normalize dates and numbers, preview changes, and download an audit log."
     />
-    <meta name="keywords" content="CSV cleaner, local CSV tool, offline CSV editor, dedupe CSV, CSV formatter, data cleanup" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Local CSV Beautifier" />
     <meta name="theme-color" content="#1f6feb" />
@@ -32,11 +31,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://csvcleanersecure.org/" />
-    <meta
-      property="og:image"
-      content="https://csvcleanersecure.org/og-image.svg"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
       content="Local CSV Beautifier - Private CSV Cleaner, Formatter, and Validator"
@@ -47,17 +42,12 @@
     />
     <link rel="canonical" href="https://csvcleanersecure.org/" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Local CSV Beautifier",
-        "url": "/",
+        "url": "https://csvcleanersecure.org/",
         "applicationCategory": "Utilities",
         "operatingSystem": "Any modern browser",
         "description": "A local-first CSV cleanup web app that trims, normalizes, deduplicates, and exports CSV files in-browser.",
@@ -72,8 +62,40 @@
         ],
         "creator": {
           "@type": "Person",
-          "name": "Local CSV Beautifier team"
+          "name": "Lawnce Goh"
         }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do my files upload to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All transformations happen locally in your browser and the cleaned file is generated on-device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use it for large files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, within browser limits. For very large CSV files, remove unnecessary columns first for best performance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I reuse settings?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Save and reload cleaning profiles in your browser for repeatable results."
+            }
+          }
+        ]
       }
     </script>
   </head>
@@ -82,8 +104,10 @@
       <header class="hero">
         <nav class="top-nav" aria-label="Primary">
           <a href="resources.html">Guides</a>
+          <a href="methodology.html">Methodology</a>
           <a href="about.html">About</a>
-          <a href="compliance.html">Privacy</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <h1>Local CSV Beautifier</h1>
         <div class="actions">
@@ -98,8 +122,28 @@
           <span>Change log export</span>
           <span>Saved cleanup profiles</span>
           <span>Excel-friendly output</span>
+          <span>No ads during review</span>
         </div>
       </header>
+
+      <section class="card value-card">
+        <h2>What this cleaner actually does</h2>
+        <div class="value-grid">
+          <div>
+            <h3>1. Parse messy exports</h3>
+            <p>Detect comma, semicolon, tab, and pipe-delimited files, including common spreadsheet exports with quoted values.</p>
+          </div>
+          <div>
+            <h3>2. Normalize structure</h3>
+            <p>Clean headers, trim whitespace, collapse repeated spaces, remove empty rows, and make duplicate headers unique.</p>
+          </div>
+          <div>
+            <h3>3. Review before download</h3>
+            <p>Inspect source and cleaned previews side by side, then export both the cleaned CSV and a JSON change log.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="app-shell">
         <aside class="sidebar">
           <section class="card">
@@ -134,6 +178,8 @@
               <li><a href="guide-ecommerce-order-csv-cleanup.html">Prepare ecommerce order CSV files</a></li>
               <li><a href="guide-bank-transaction-csv-reconciliation.html">Normalize bank transaction CSV files</a></li>
               <li><a href="guide-survey-csv-cleaning.html">Clean survey CSV results</a></li>
+              <li><a href="guide-excel-csv-import-pitfalls.html">Fix Excel CSV import issues</a></li>
+              <li><a href="guide-csv-schema-validation.html">Validate CSV schema before analysis</a></li>
             </ul>
           </section>
 
@@ -165,6 +211,8 @@
                 <button class="btn ghost" type="button" data-sample="orders">Order exports</button>
                 <button class="btn ghost" type="button" data-sample="bank">Bank transactions</button>
                 <button class="btn ghost" type="button" data-sample="survey">Survey results</button>
+                <button class="btn ghost" type="button" data-sample="excel">Excel import</button>
+                <button class="btn ghost" type="button" data-sample="schema">Schema check</button>
               </div>
             </div>
             <div class="input-grid">
@@ -266,9 +314,20 @@
       <div class="footer-links">
       <a class="footer-tab" href="about.html">About</a>
       <a class="footer-tab" href="resources.html">Guides</a>
+      <a class="footer-tab" href="privacy.html">Privacy</a>
+      <a class="footer-tab" href="terms.html">Terms</a>
+      <a class="footer-tab" href="methodology.html">Methodology</a>
+      <a class="footer-tab" href="contact.html">Contact</a>
       <a class="footer-tab" href="compliance.html">Compliance</a>
       </div>
       <p class="footer-note">Privacy, ad transparency, and local-processing disclosures are available in Compliance.</p>
+      <p class="footer-note">
+        Publisher pages:
+        <a href="privacy.html">Privacy Policy</a>,
+        <a href="terms.html">Terms</a>,
+        <a href="methodology.html">Methodology</a>,
+        <a href="contact.html">Contact</a>.
+      </p>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>

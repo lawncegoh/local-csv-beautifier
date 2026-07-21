@@ -15,7 +15,6 @@
       name="description"
       content="Clean ecommerce order CSV exports by standardizing order IDs, dates, totals, customer fields, fulfillment status, and duplicate rows."
     />
-    <meta name="keywords" content="ecommerce csv cleanup, order export csv, clean Shopify csv, order data quality" />
     <meta name="robots" content="index, follow" />
     <meta property="og:site_name" content="Local CSV Beautifier" />
     <meta property="og:title" content="Ecommerce order CSV cleanup for reporting and import" />
@@ -24,11 +23,30 @@
     <meta property="og:url" content="https://csvcleanersecure.org/guide-ecommerce-order-csv-cleanup.html" />
     <link rel="canonical" href="https://csvcleanersecure.org/guide-ecommerce-order-csv-cleanup.html" />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2686848292627739"
-      crossorigin="anonymous"
-    ></script>
+    <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Ecommerce order CSV cleanup for reporting and import | Local CSV Beautifier",
+          "description": "Clean ecommerce order CSV exports by standardizing order IDs, dates, totals, customer fields, fulfillment status, and duplicate rows.",
+          "url": "https://csvcleanersecure.org/guide-ecommerce-order-csv-cleanup.html",
+          "datePublished": "2026-07-21",
+          "dateModified": "2026-07-21",
+          "author": {
+                "@type": "Person",
+                "name": "Lawnce Goh"
+          },
+          "publisher": {
+                "@type": "Organization",
+                "name": "Local CSV Beautifier"
+          },
+          "isPartOf": {
+                "@type": "WebSite",
+                "name": "Local CSV Beautifier",
+                "url": "https://csvcleanersecure.org/"
+          }
+    }
+    </script>
   </head>
   <body>
     <main class="page">
@@ -91,11 +109,30 @@
           <li>Download the change log and compare row count, order count, and total revenue.</li>
         </ol>
       </section>
+
+      <section class="card">
+        <h2>Example QA checks before import</h2>
+        <p>
+          After cleaning, compare three totals against the original platform export: number of unique orders, number of
+          line items, and gross order value. If any count changes unexpectedly, inspect duplicate removal and number parsing
+          before using the file for fulfillment or finance.
+        </p>
+        <ul>
+          <li><strong>Order IDs:</strong> should remain text when they include prefixes, marketplace codes, or leading zeros.</li>
+          <li><strong>Line items:</strong> should not be deduplicated when two rows share the same order but different SKU.</li>
+          <li><strong>Totals:</strong> should be numeric only after currency symbols and thousands separators are handled deliberately.</li>
+          <li><strong>Statuses:</strong> should map to a small list that operations and finance both understand.</li>
+        </ul>
+      </section>
     </main>
     <footer class="site-footer">
-      <a class="footer-tab" href="index.html">Tool</a>
-      <a class="footer-tab" href="resources.html">Guides</a>
-      <a class="footer-tab" href="compliance.html">Compliance</a>
+      <div class="footer-links">
+        <a class="footer-tab" href="index.html">Tool</a>
+        <a class="footer-tab" href="resources.html">Guides</a>
+        <a class="footer-tab" href="about.html">About</a>
+        <a class="footer-tab" href="privacy.html">Privacy</a>
+        <a class="footer-tab" href="contact.html">Contact</a>
+      </div>
       <p class="footer-note">© 2026 Local CSV Beautifier. Created February 2026. All rights reserved.</p>
     </footer>
   </body>
